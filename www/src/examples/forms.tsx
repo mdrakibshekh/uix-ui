@@ -23,7 +23,7 @@ import { Inbox, Star, Zap } from "../components/ui/icons";
 /* ---------- input ---------- */
 function InputDefault() {
   return (
-    <div style={{ width: 320 }}>
+    <div style={{ width: 320, maxWidth: "100%" }}>
       <Input label="Your name" placeholder="Nusrat Jahan" helper="We print this on the parcel." />
     </div>
   );
@@ -63,7 +63,7 @@ function InputExtras() {
 /* ---------- select ---------- */
 function SelectDefault() {
   return (
-    <div style={{ width: 320 }}>
+    <div style={{ width: 320, maxWidth: "100%" }}>
       <Select label="Tea" defaultValue="darjeeling">
         <option value="darjeeling">Darjeeling tin</option>
         <option value="green">Sylhet green</option>
@@ -75,7 +75,7 @@ function SelectDefault() {
 
 function SelectPlaceholder() {
   return (
-    <div style={{ width: 320 }}>
+    <div style={{ width: 320, maxWidth: "100%" }}>
       <Select label="Delivery area" placeholder="Choose an area" defaultValue="">
         <option value="dhanmondi">Dhanmondi</option>
         <option value="gulshan">Gulshan</option>
@@ -98,7 +98,7 @@ function SelectStates() {
 /* ---------- textarea ---------- */
 function TextareaDefault() {
   return (
-    <div style={{ width: 360 }}>
+    <div style={{ width: 360, maxWidth: "100%" }}>
       <Textarea label="Gift note" placeholder="Write a few words for the card." rows={3} />
     </div>
   );
@@ -117,7 +117,7 @@ function TextareaStates() {
 function SearchFieldDefault() {
   const [q, setQ] = React.useState("");
   return (
-    <div style={{ width: 320 }}>
+    <div style={{ width: 320, maxWidth: "100%" }}>
       <SearchField placeholder="Search teas" aria-label="Search teas" value={q} onChange={e => setQ(e.target.value)} onClear={() => setQ("")} />
     </div>
   );
@@ -126,7 +126,7 @@ function SearchFieldDefault() {
 /* ---------- number input ---------- */
 function NumberInputDefault() {
   return (
-    <div style={{ width: 200 }}>
+    <div style={{ width: 200, maxWidth: "100%" }}>
       <NumberInput label="Tins" defaultValue={2} min={1} max={12} />
     </div>
   );
@@ -147,7 +147,7 @@ function OtpInputDefault() {
 function ComboboxDefault() {
   const [value, setValue] = React.useState("");
   return (
-    <div style={{ width: 320 }}>
+    <div style={{ width: 320, maxWidth: "100%" }}>
       <Combobox
         label="District"
         placeholder="Start typing"
@@ -304,7 +304,7 @@ function ChipRemovable() {
 /* ---------- tag input ---------- */
 function TagInputDefault() {
   return (
-    <div style={{ width: 360 }}>
+    <div style={{ width: 360, maxWidth: "100%" }}>
       <TagInput label="Invite the team" defaultValue={["israt@shapla.example"]} helper="Press Enter after each email." />
     </div>
   );
@@ -351,7 +351,7 @@ function DatePickerRange() {
 function FileUploadDefault() {
   const [name, setName] = React.useState("");
   return (
-    <div style={{ width: 360 }}>
+    <div style={{ width: 360, maxWidth: "100%" }}>
       <FileUpload onFiles={files => setName(files[0]?.name ?? "")} helper={name ? `Added: ${name}` : "PNG or SVG, up to 2 MB."} />
     </div>
   );

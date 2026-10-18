@@ -68,7 +68,7 @@ const CodeBlock = React.forwardRef<HTMLDivElement, CodeBlockProps>(
             </button>
           </div>
         ) : null}
-        <pre className="overflow-x-auto p-4 text-code font-mono">
+        <pre tabIndex={0} className="overflow-x-auto p-4 text-code font-mono focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-line-focus">
           <code className="flex flex-col">
             {lines.map((line, index) => (
               <span key={index} className="flex gap-4">

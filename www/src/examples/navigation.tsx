@@ -17,7 +17,7 @@ import { Copy, House, Inbox, Search, Star, User } from "../components/ui/icons";
 function TabsDefault() {
   const [tab, setTab] = React.useState("details");
   return (
-    <Tabs value={tab} onValueChange={setTab} style={{ width: 360 }}>
+    <Tabs value={tab} onValueChange={setTab} style={{ width: 360, maxWidth: "100%" }}>
       <TabsList>
         <TabsTrigger value="details">Details</TabsTrigger>
         <TabsTrigger value="brewing">Brewing</TabsTrigger>
@@ -117,7 +117,7 @@ function SidebarItemDefault() {
   const [here, setHere] = React.useState("orders");
   const go = (id: string) => (e: React.MouseEvent) => { e.preventDefault(); setHere(id); };
   return (
-    <Sidebar style={{ width: 240 }}>
+    <Sidebar style={{ width: 240, maxWidth: "100%" }}>
       <SidebarItem href="#home" icon={<House />} active={here === "home"} onClick={go("home")}>Home</SidebarItem>
       <SidebarItem href="#orders" icon={<Inbox />} badge={12} active={here === "orders"} onClick={go("orders")}>Orders</SidebarItem>
       <SidebarItem href="#customers" icon={<User />} trailingChevron active={here === "customers"} onClick={go("customers")}>Customers</SidebarItem>
@@ -157,7 +157,7 @@ function StepperInteractive() {
 function MenuDefault() {
   const [grid, setGrid] = React.useState(true);
   return (
-    <Menu style={{ width: 240 }} aria-label="Order actions">
+    <Menu style={{ width: 240, maxWidth: "100%" }} aria-label="Order actions">
       <MenuItem icon={<Copy />} shortcut="⌘C">Copy order number</MenuItem>
       <MenuItem icon={<Search />}>Find similar</MenuItem>
       <MenuItem checked={grid} onClick={() => setGrid(!grid)}>Show as grid</MenuItem>
@@ -172,7 +172,7 @@ function BottomNavDefault() {
   const [tab, setTab] = React.useState("shop");
   const go = (id: string) => (e: React.MouseEvent) => { e.preventDefault(); setTab(id); };
   return (
-    <div style={{ width: 360 }}>
+    <div style={{ width: 360, maxWidth: "100%" }}>
       <BottomNav>
         <BottomNavItem href="#shop" icon={<House />} active={tab === "shop"} onClick={go("shop")}>Shop</BottomNavItem>
         <BottomNavItem href="#search" icon={<Search />} active={tab === "search"} onClick={go("search")}>Search</BottomNavItem>
@@ -188,7 +188,7 @@ function TreeViewDefault() {
   const [open, setOpen] = React.useState(true);
   const [sel, setSel] = React.useState("green.md");
   return (
-    <Tree style={{ width: 280 }} aria-label="Product files">
+    <Tree style={{ width: 280, maxWidth: "100%" }} aria-label="Product files">
       <TreeItem expanded={open} onClick={() => setOpen(!open)}>teas</TreeItem>
       {open ? (
         <>

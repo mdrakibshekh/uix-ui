@@ -88,7 +88,7 @@ const OtpInput = React.forwardRef<HTMLDivElement, OtpInputProps>(
                   if (event.key === "Backspace" && !current[index]) boxes.current[index - 1]?.focus();
                 }}
                 onFocus={(event) => event.target.select()}
-                className={cn("text-center rounded-[inherit] h-[56px] w-12 text-heading-4 text-fg-primary placeholder:text-fg-tertiary border border-line-default bg-surface hover:border-line-strong focus-visible:ring-3 focus-visible:ring-line-focus focus-visible:border-line-focus disabled:cursor-not-allowed disabled:bg-disabled", error && "border-line-danger hover:border-line-danger focus-visible:border-line-danger focus-visible:ring-line-danger")}
+                className={cn("text-center rounded-[inherit] min-w-0 flex-1 h-[56px] max-w-12 text-heading-4 text-fg-primary placeholder:text-fg-tertiary border border-line-default bg-surface hover:border-line-strong focus-visible:ring-3 focus-visible:ring-line-focus focus-visible:border-line-focus disabled:cursor-not-allowed disabled:bg-disabled", error && "border-line-danger hover:border-line-danger focus-visible:border-line-danger focus-visible:ring-line-danger")}
               />
             </React.Fragment>
           ))}

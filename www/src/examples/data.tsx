@@ -99,7 +99,7 @@ function AvatarGroupDefault() {
 /* ---------- card ---------- */
 function CardDefault() {
   return (
-    <Card style={{ width: 340 }}>
+    <Card style={{ width: 340, maxWidth: "100%" }}>
       <CardHeader>
         <div>
           <CardTitle>Sylhet green</CardTitle>
@@ -119,7 +119,7 @@ function CardAppearances() {
   return (
     <div className="flex flex-wrap gap-4">
       {(["outlined", "elevated", "filled"] as const).map(a => (
-        <Card key={a} appearance={a} style={{ width: 200 }}>
+        <Card key={a} appearance={a} style={{ width: 200, maxWidth: "100%" }}>
           <CardTitle>{a}</CardTitle>
           <CardDescription>Masala chai, 250g.</CardDescription>
         </Card>
@@ -130,7 +130,7 @@ function CardAppearances() {
 
 function CardWithFooter() {
   return (
-    <Card appearance="elevated" style={{ width: 340 }}>
+    <Card appearance="elevated" style={{ width: 340, maxWidth: "100%" }}>
       <CardHeader>
         <CardTitle>Order #1042</CardTitle>
         <Badge color="warning">Packing</Badge>
@@ -144,7 +144,7 @@ function CardWithFooter() {
 /* ---------- stat ---------- */
 function StatDefault() {
   return (
-    <div style={{ width: 240 }}>
+    <div style={{ width: 240, maxWidth: "100%" }}>
       <Stat label="Revenue" value="৳4,82,300" delta="+12.4%" caption="vs last week" />
     </div>
   );
@@ -205,7 +205,7 @@ function TableSelectable() {
 /* ---------- accordion ---------- */
 function AccordionDefault() {
   return (
-    <Accordion style={{ width: 400 }}>
+    <Accordion style={{ width: 400, maxWidth: "100%" }}>
       <AccordionItem title="How long does delivery take?" open>Inside Dhaka, one to two days. Other districts, three to five.</AccordionItem>
       <AccordionItem title="Can I return opened tea?">Yes, within seven days if you did not like it.</AccordionItem>
       <AccordionItem title="Do you ship abroad?">Not yet. We are working on it.</AccordionItem>
@@ -246,7 +246,7 @@ function KbdDefault() {
 /* ---------- timeline ---------- */
 function TimelineDefault() {
   return (
-    <Timeline style={{ width: 320 }}>
+    <Timeline style={{ width: 320, maxWidth: "100%" }}>
       <TimelineItem status="done" title="Order placed" description="Nusrat Jahan, Mirpur" time="Mon 10:20 am" />
       <TimelineItem status="current" title="Packing" description="Wrapped in the gift box" time="Mon 2:00 pm" />
       <TimelineItem status="upcoming" title="Out for delivery" last />
@@ -258,7 +258,7 @@ function TimelineDefault() {
 function DescriptionListDefault() {
   return (
     <DescriptionList
-      style={{ width: 460 }}
+      style={{ width: 460, maxWidth: "100%" }}
       items={[
         { term: "Customer", detail: "Nusrat Jahan" },
         { term: "Address", detail: "House 14, Road 5, Dhanmondi, Dhaka" },
@@ -272,7 +272,7 @@ function DescriptionListDefault() {
 /* ---------- code block ---------- */
 function CodeBlockDefault() {
   return (
-    <div style={{ width: 460 }}>
+    <div style={{ width: 460, maxWidth: "100%" }}>
       <CodeBlock filename="add-tea.sh" code={"npx uix-ui@latest init\nnpx uix-ui@latest add button card"} />
     </div>
   );
@@ -281,7 +281,7 @@ function CodeBlockDefault() {
 /* ---------- quote ---------- */
 function QuoteDefault() {
   return (
-    <div style={{ width: 420 }}>
+    <div style={{ width: 420, maxWidth: "100%" }}>
       <Quote author="Sadia Rahman" role="Regular customer, Gulshan" avatar={<Avatar initials="SR" />}>
         The Sylhet green is the first tea my mother asks about when I visit.
       </Quote>
@@ -296,7 +296,7 @@ function ChartDefault() {
     { label: "Wed", value: 47 }, { label: "Thu", value: 61 }, { label: "Fri", value: 38 },
   ];
   return (
-    <div style={{ width: 440 }}>
+    <div style={{ width: 440, maxWidth: "100%" }}>
       <Chart type="bar" data={data} title="Orders this week" value="299" delta="+18%" highlight={5} />
     </div>
   );

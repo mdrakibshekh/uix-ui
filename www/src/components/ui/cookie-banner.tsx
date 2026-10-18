@@ -12,7 +12,7 @@ const cookieBannerVariants = cva(
   {
     variants: {
       layout: {
-        bar: "w-full flex-row items-center border-t px-6 py-4 gap-4 [&_[data-slot=actions]]:flex-row-reverse",
+        bar: "w-full flex-row flex-wrap items-center border-t px-6 py-4 gap-4 [&_[data-slot=actions]]:flex-row-reverse [&_[data-slot=actions]]:flex-wrap [&_[data-slot=actions]]:max-w-full",
         card: "w-[360px] max-w-full flex-col items-start p-5 gap-4 shadow-lg [&_[data-slot=actions]]:w-full [&_[data-slot=actions]]:flex-col [&_[data-slot=actions]>*]:justify-center",
       },
     },

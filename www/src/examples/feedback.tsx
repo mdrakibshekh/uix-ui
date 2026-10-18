@@ -18,7 +18,7 @@ import { Info, Inbox } from "../components/ui/icons";
 /* ---------- alert ---------- */
 function AlertDefault() {
   return (
-    <div style={{ width: 440 }}>
+    <div style={{ width: 440, maxWidth: "100%" }}>
       <Alert type="info" title="Your parcel is on its way">Nusrat, the courier will call before arriving.</Alert>
     </div>
   );
@@ -50,7 +50,7 @@ function AlertActions() {
   const [open, setOpen] = React.useState(true);
   if (!open) return <Button variant="outline" onClick={() => setOpen(true)}>Show the alert again</Button>;
   return (
-    <div style={{ width: 440 }}>
+    <div style={{ width: 440, maxWidth: "100%" }}>
       <Alert type="warning" title="Your cart expires soon" onClose={() => setOpen(false)} actions={<Button size="sm" variant="outline">Check out</Button>}>
         Items are held for 15 minutes.
       </Alert>
@@ -125,7 +125,7 @@ function TooltipLight() {
 /* ---------- progress ---------- */
 function ProgressDefault() {
   return (
-    <div style={{ width: 320 }}>
+    <div style={{ width: 320, maxWidth: "100%" }}>
       <Progress value={64} aria-label="Order progress" />
     </div>
   );

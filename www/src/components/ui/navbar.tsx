@@ -13,7 +13,7 @@ export interface NavbarLink {
 }
 
 const navbarVariants = cva(
-  "flex w-full items-center h-16 px-6 gap-8",
+  "flex w-full flex-wrap items-center h-16 px-6 gap-8 max-sm:h-auto max-sm:py-3 max-sm:gap-y-3",
   {
     variants: {
       theme: {
@@ -46,7 +46,7 @@ const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
   ({ className, theme, brand, links, search, actions, children, ...props }, ref) => (
     <header data-slot="navbar" data-kind="surface" ref={ref} className={cn(navbarVariants({ theme }), className)} {...props}>
       {brand ? <div className="flex shrink-0 items-center gap-2 text-title-medium">{brand}</div> : null}
-      <nav aria-label="Main" className="flex flex-1 items-center gap-6">
+      <nav aria-label="Main" className="flex min-w-0 flex-1 items-center gap-6 max-sm:order-last max-sm:basis-full max-sm:overflow-x-auto max-sm:[scrollbar-width:none] max-sm:[&>a]:shrink-0 max-sm:[&>a]:whitespace-nowrap">
         {links?.map((item, index) => (
           <a key={index} href={item.href} aria-current={item.current ? "page" : void 0} className="rounded-xs text-label-medium focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-line-focus">
             {item.label}
@@ -55,7 +55,7 @@ const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
         {children}
       </nav>
       {search}
-      {actions ? <div className="flex shrink-0 items-center gap-3">{actions}</div> : null}
+      {actions ? <div className="flex shrink-0 items-center max-sm:ml-auto gap-3">{actions}</div> : null}
     </header>
   ),
 );

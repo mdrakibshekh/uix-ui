@@ -19,7 +19,7 @@ export interface TableProps
 
 const Table = React.forwardRef<HTMLTableElement, TableProps>(
   ({ className, frameClassName, ...props }, ref) => (
-    <div data-slot="table" data-kind="surface" className={cn(tableVariants({  }), frameClassName)}>
+    <div data-slot="table" data-kind="surface" tabIndex={0} className={cn(tableVariants({  }), frameClassName)}>
       <table ref={ref} className={cn("w-full border-collapse text-left", className)} {...props} />
     </div>
   ),
