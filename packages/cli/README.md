@@ -19,4 +19,12 @@ import { Button } from "@/components/ui/button";
 Dark mode: `<html data-theme="dark">`. Options: `--overwrite` (add), `--no-install` (print the install command
 instead of running it), `--registry <url|folder>` (init).
 
+UIX Pro (marketing blocks, nine visual styles, 210 more themes): set your key, then add them by name.
+
+```bash
+export UIX_LICENSE=<your key>
+npx uix-ui@latest add hero pricing-card skins
+npx uix-ui@latest theme acid-prompt
+```
+
 Docs, live components and all 42 themes: https://uixdesign.pagestro.com/ui · Source: https://github.com/mdrakibshekh/uix-ui · MIT

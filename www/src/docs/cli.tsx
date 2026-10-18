@@ -61,7 +61,7 @@ function Body() {
       <section>
         <H2 id="pro-items">Pro items</H2>
         <Callout tone="pro">
-          <b>UIX Pro.</b> Set <code>UIX_LICENSE</code> to your key and add items from the private registry: <code>UIX_LICENSE=&lt;key&gt; npx uix-ui add @uix-pro/&lt;name&gt;</code>. Get a key on the <a href="https://uixdesign.pagestro.com/pricing">pricing page</a>.
+          <b>UIX Pro.</b> Set <code>UIX_LICENSE</code> to your key, then add Pro items by name, the same as free ones: the marketing blocks (<code>hero</code>, <code>pricing-card</code>, <code>testimonial</code>…), the visual styles (<code>skins</code>) and the 210 Pro themes (<code>npx uix-ui theme acid-prompt</code>). <code>list</code> shows them all. Get a key on the <a href="https://uixdesign.pagestro.com/pricing">pricing page</a>.
         </Callout>
       </section>
       <section>

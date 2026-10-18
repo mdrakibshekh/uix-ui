@@ -4,6 +4,9 @@
  *
  *   UIX_CORE     path to the UIX repo's src/core       (default ../UIX Design System V1/src/core)
  *   UIX_PRESETS  path to uix-library/dist/registry     (default ../uix-library/dist/registry)
+ *   UIX_PRO_OUT  where the private Pro registry goes   (default ../uix-website/site/public/_pro/ui-r, served only
+ *                through the Worker's licence check; never inside this public repo). Skipped when uix-library has
+ *                no dist/private (the Pro presets).
  */
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, join, resolve } from 'node:path';
@@ -16,7 +19,7 @@ const core = (m: string) => import(pathToFileURL(join(CORE, m + '.ts')).href);
 
 const { defaultConfig } = await core('defaults');
 const { toReact, globalsCss, REACT_COMPONENT_IDS } = await core('codegen-react');
-const { COMPONENT_CATEGORIES } = await core('components');
+const { COMPONENT_CATEGORIES, VISUAL_STYLES } = await core('components');
 const { importTokens } = await core('importers');
 
 const NS = '@uix';
@@ -27,11 +30,11 @@ const freeIds = REACT_COMPONENT_IDS.filter((id: string) => !proIds.has(id));
 
 const json = (o: unknown) => JSON.stringify(o, null, 2) + '\n';
 
-function configFor(preset?: { id: string; name: string }) {
+function configFor(preset?: { id: string; name: string }, dir = PRESETS) {
   const c = defaultConfig();
   c.meta.name = preset?.name ?? 'UIX';
   c.components.selected = freeIds;
-  if (preset) importTokens(readFileSync(join(PRESETS, 'presets', preset.id, 'tokens.dtcg.json'), 'utf8'), c, { fileName: `${preset.id}.tokens.json` }).apply(c);
+  if (preset) importTokens(readFileSync(join(dir, 'presets', preset.id, 'tokens.dtcg.json'), 'utf8'), c, { fileName: `${preset.id}.tokens.json` }).apply(c);
   return c;
 }
 
@@ -81,3 +84,27 @@ writeFileSync(join(tw, 'uix.css'), '/* Default UIX theme. Other themes: @import 
 const missing = free.filter((p: any) => !existsSync(join(tw, 'themes', `${p.id}.css`)));
 if (missing.length) throw new Error(`themes missing: ${missing.map((p: any) => p.id).join(', ')}`);
 console.log(`registry: ${items.length} items (${freeIds.length} components) + ${themes.length} themes · Pro components held back: ${[...proIds].join(', ')}`);
+
+// ---- Pro (private): the Pro themes, the marketing blocks and the visual styles, for `@uix-pro/<name>`
+const PRIVATE = resolve(PRESETS, '../private');
+const PRO_OUT = resolve(process.env.UIX_PRO_OUT ?? join(root, '../uix-website/site/public/_pro/ui-r'));
+if (existsSync(join(PRIVATE, 'presets'))) {
+  const all = defaultConfig();
+  all.components.selected = REACT_COMPONENT_IDS;
+  all.components.styles = Object.keys(VISUAL_STYLES); // every visual style in skins.css (the free build has Modern only)
+  const proNames = new Set<string>();
+  const proItems = toReact(all).filter((f: any) => /^registry\/[^/]+\.json$/.test(f.name)).map((f: any) => JSON.parse(f.content))
+    .filter((it: any) => it.name === 'skins' || !items.some((x: any) => x.name === it.name) && it.name !== 'theme');
+  proItems.forEach((it: any) => proNames.add(it.name));
+  for (const it of proItems) it.registryDependencies = it.registryDependencies.map((d: string) => `${proNames.has(d) ? '@uix-pro' : NS}/${d}`);
+  const proThemes = index.presets.filter((p: any) => p.tier === 'pro').map((p: any) => themeItem(`theme-${p.id}`, `${p.name} theme`, configFor(p, PRIVATE)));
+  rmSync(PRO_OUT, { recursive: true, force: true });
+  mkdirSync(PRO_OUT, { recursive: true });
+  for (const it of [...proItems, ...proThemes]) writeFileSync(join(PRO_OUT, `${it.name}.json`), json(it));
+  // The index is public (names only, like the presets page); the items need a key.
+  writeFileSync(join(PRO_OUT, 'registry.json'), json({
+    $schema: 'https://ui.shadcn.com/schema/registry.json', name: 'uix-pro', homepage: 'https://uixdesign.pagestro.com/pricing',
+    items: [...proItems, ...proThemes].map(({ $schema, files, ...rest }) => ({ ...rest, files: files.map(({ content, ...f }: any) => f) })),
+  }));
+  console.log(`pro registry → ${PRO_OUT}: ${proItems.length} items (${proItems.map((i: any) => i.name).join(', ')}) + ${proThemes.length} themes`);
+}

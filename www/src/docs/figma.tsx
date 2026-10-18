@@ -28,7 +28,7 @@ function Body() {
         <H2 id="design-tokens">Tokens and code</H2>
         <p>The plugin can export your design system as CSS variables or Tailwind v4 tokens for free. The React export, which writes components like the ones in uix-ui, is part of Pro.</p>
         <Callout tone="pro">
-          <b>UIX Pro.</b> Your own system, made in the Figma plugin, becomes a private registry. Install it with your licence key: <code>UIX_LICENSE=&lt;key&gt; npx uix-ui add @uix-pro/&lt;name&gt;</code>.
+          <b>UIX Pro.</b> The same key also unlocks the Pro items of this library: marketing blocks, visual styles and all 251 themes. <code>UIX_LICENSE=&lt;key&gt; npx uix-ui add hero</code>.
         </Callout>
       </section>
       <section>

@@ -1,6 +1,6 @@
 {
   "name": "uix-ui",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Add UIX components and themes to your React + Tailwind app: npx uix-ui init.",
   "license": "MIT",
   "type": "module",

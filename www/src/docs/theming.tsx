@@ -88,7 +88,7 @@ function Body() {
       <section>
         <H2 id="visual-styles">Visual styles</H2>
         <Callout tone="pro">
-          <b>UIX Pro.</b> Visual styles change how the components look without touching your tokens: glass, clay, neon, brutalism and more. Set <code>data-skin</code> on <code>html</code> or on any wrapper, and everything inside it follows. Without it you get the Modern look.
+          <b>UIX Pro.</b> Visual styles change how the components look without touching your tokens: glass, clay, neon, brutalism and more. Set <code>data-skin</code> on <code>html</code> or on any wrapper, and everything inside it follows. Without it you get the Modern look. Add the styles once with <code>UIX_LICENSE=&lt;key&gt; npx uix-ui add skins</code>; the CLI imports them into your CSS.
         </Callout>
         <Code lang="tsx" file="index.html" code={`<html data-skin="minimal" data-theme="dark">\n\n<section data-skin="glass">\n  <!-- components in here wear the Glass style -->\n</section>`} />
         <p>Pro also covers <Link to="/templates">templates and blocks</Link> and all {COUNTS.all} themes. See <a href="https://uixdesign.pagestro.com/pricing">pricing</a>.</p>

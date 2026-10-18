@@ -15,7 +15,8 @@ const HELP = `uix-ui: UIX components and themes for React + Tailwind v4
 
   --overwrite     replace files that already exist (add)
   --no-install    don't run the package manager, just print the command
-  Pro items: set UIX_LICENSE=<your key> and add @uix-pro/<name>.`;
+  UIX Pro: set UIX_LICENSE=<your key>, then add Pro items by name (hero, pricing-card, skins…) or switch to a
+  Pro theme (npx uix-ui theme acid-prompt). \`list\` shows them all.`;
 
 const cwd = process.cwd();
 const argv = process.argv.slice(2);
@@ -54,28 +55,56 @@ function source(cfg, name) {
   return { ns, item, url: url.replace('{name}', item), headers: Object.fromEntries(Object.entries(headers).map(([k, v]) => [k, env(v)])) };
 }
 
+const PRICING = 'https://uixdesign.pagestro.com/pricing';
+const missing = (src) => Object.assign(new Error(`"${src.item}" is not in the registry (${src.url}).`), { missing: true });
+
 async function load(src) {
   if (!/^https?:/.test(src.url)) {
-    if (!existsSync(src.url)) die(`"${src.item}" is not in the registry (${src.url}).`);
+    if (!existsSync(src.url)) throw missing(src);
     return JSON.parse(readFileSync(src.url, 'utf8'));
   }
   const res = await fetch(src.url, { headers: src.headers });
-  if (res.status === 401 || res.status === 403) die(`"${src.item}" is a UIX Pro item. Set UIX_LICENSE to your key (https://uixdesign.pagestro.com/pricing).`);
+  if (res.status === 401) die(process.env.UIX_LICENSE ? `UIX_LICENSE is set, but that key wasn't found. Check it in your UIX account (${PRICING}).` : `${src.item.startsWith('theme-') ? `The "${src.item.slice(6)}" theme` : `"${src.item}"`} is part of UIX Pro. Set UIX_LICENSE to your key (${PRICING}).`);
+  if (res.status === 403) die(`"${src.item}" needs an active UIX Pro licence; this key's plan has ended (${PRICING}).`);
+  if (res.status === 404) throw missing(src);
   if (!res.ok) die(`"${src.item}" could not be loaded (${res.status} from ${src.url}).`);
   return res.json();
+}
+
+/** The Pro index (names only, no key needed), or null when there is no Pro registry. */
+let proIndex;
+async function loadProIndex(cfg) {
+  if (proIndex !== undefined) return proIndex;
+  if (!cfg.registries?.['@uix-pro']) return (proIndex = null);
+  const ps = source(cfg, '@uix-pro/x');
+  return (proIndex = await load({ ...ps, item: 'registry.json', url: ps.url.replace(/\/x\.json$/, '/registry.json'), headers: {} }).catch(() => null));
+}
+
+/** A bare name that the free registry doesn't have is looked up in Pro (`hero` → `@uix-pro/hero`). */
+async function loadAny(cfg, src) {
+  try { return { src, it: await load(src) }; } catch (e) {
+    if (!e.missing || src.ns !== '@uix') throw e;
+    const index = await loadProIndex(cfg);
+    if (!index?.items.some(i => i.name === src.item)) throw Object.assign(new Error(`"${src.item.replace(/^theme-/, '')}" is not a uix-ui component or theme. See the list: npx uix-ui list`), { missing: true });
+    const pro = source(cfg, `@uix-pro/${src.item}`);
+    return { src: pro, it: await load(pro) };
+  }
 }
 
 /** Loads the items and everything they depend on, dependencies first. */
 async function resolveAll(cfg, list) {
   const seen = new Map();
   const visit = async (name) => {
-    const src = source(cfg, name);
+    let src = source(cfg, name);
     const key = `${src.ns}/${src.item}`;
     if (seen.has(key)) return;
     seen.set(key, null);
-    const it = await load(src);
+    const bare = !name.startsWith('@');
+    const got = bare ? await loadAny(cfg, src) : { src, it: await load(src) };
+    const it = got.it;
+    if (got.src !== src) { seen.delete(key); src = got.src; seen.set(`${src.ns}/${src.item}`, null); }
     for (const d of it.registryDependencies ?? []) await visit(d.startsWith('@') ? d : `${src.ns}/${d}`);
-    seen.delete(key); seen.set(key, it);
+    seen.delete(`${src.ns}/${src.item}`); seen.set(`${src.ns}/${src.item}`, it);
   };
   for (const n of list) await visit(n);
   return [...seen.values()];
@@ -102,6 +131,20 @@ function place(cfg, items, overwrite) {
     write(file, code);
     say(`  wrote   ${shown}`);
   }
+  for (const it of items) for (const f of it.files) if (/\.css$/.test(f.path) && !/(^|\/)uix\.css$/.test(f.path)) importCss(cfg, target(cfg, f));
+}
+
+/** Adds `@import "<file>";` to the app's main CSS, after the theme import (visual styles, backdrops). */
+function importCss(cfg, file) {
+  const cssFile = join(cwd, cfg.tailwind?.css ?? 'src/index.css');
+  if (!existsSync(cssFile)) return;
+  let src = readFileSync(cssFile, 'utf8');
+  const imp = `@import "${rel(cssFile, file)}";`;
+  if (src.includes(imp)) return;
+  const last = [...src.matchAll(/@import [^;\n]+;?/g)].pop();   // after the theme and any earlier style sheets
+  src = last ? src.slice(0, last.index + last[0].length) + `\n${imp}` + src.slice(last.index + last[0].length) : `${imp}\n${src}`;
+  write(cssFile, src);
+  say(`  updated ${relative(cwd, cssFile)}`);
 }
 
 function install(items) {
@@ -192,7 +235,12 @@ async function main() {
     const index = await load({ ...src, item: 'registry.json', url: src.url.replace(/\/r\/x\.json$/, '/registry.json') });
     const comps = index.items.filter(i => i.type === 'registry:ui' && i.name !== 'icons').map(i => i.name);
     const themes = index.items.filter(i => i.name.startsWith('theme')).map(i => i.name === 'theme' ? 'uix' : i.name.slice(6));
-    return say(`Components (${comps.length}): ${comps.join(', ')}\n\nThemes (${themes.length}): ${themes.join(', ')}`);
+    say(`Components (${comps.length}): ${comps.join(', ')}\n\nThemes (${themes.length}): ${themes.join(', ')}`);
+    const pro = await loadProIndex(cfg);
+    if (!pro) return;
+    const blocks = pro.items.filter(i => !i.name.startsWith('theme-')).map(i => i.name);
+    const proThemes = pro.items.filter(i => i.name.startsWith('theme-')).map(i => i.name.slice(6));
+    return say(`\nUIX Pro, with UIX_LICENSE (${PRICING}):\n  Blocks and styles (${blocks.length}): ${blocks.join(', ')}\n  Themes (${proThemes.length}): ${proThemes.join(', ')}`);
   }
   die(`unknown command "${cmd}".\n\n${HELP}`);
 }

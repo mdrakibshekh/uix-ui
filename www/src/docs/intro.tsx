@@ -16,7 +16,7 @@ const PRINCIPLES: [string, string][] = [
 
 const FAQ: [string, string][] = [
   ["Is uix-ui really free?", `Yes. The components, the CLI, the Tailwind themes and the ${COUNTS.free} free presets are MIT licensed. Use them in personal and commercial projects without asking.`],
-  ["What does UIX Pro add?", `Marketing blocks, page templates, nine visual styles, all ${COUNTS.all} themes, and your own system from the Figma plugin as a private registry.`],
+  ["What does UIX Pro add?", `Marketing blocks, nine visual styles and all ${COUNTS.all} themes, installed with the same CLI and your licence key. Page templates come with the Figma plugin.`],
   ["How is it different from shadcn/ui?", "Same idea: you copy components into your app and own them. uix-ui adds full design-system themes (ramps, type, spacing, radius, light and dark), a Figma library that matches the code, and an MCP server for AI agents. It also uses the same registry format, so the shadcn CLI can install uix-ui items."],
   ["Do I need Radix or another UI library?", "No. Components use native HTML: dialog, the popover attribute and details. The only dependencies are class-variance-authority, clsx and tailwind-merge."],
   ["Which frameworks work?", "Any React 18 or 19 app with Tailwind CSS v4: Vite, Next.js (App or Pages router), Remix, Astro with React. Server Components are fine; interactive components are marked \"use client\"."],

@@ -90,7 +90,8 @@ switch. No component changes.
 
 ## With the shadcn CLI
 
-After `init`, `components.json` has the `@uix` registry, so shadcn works too:
+After `init`, `components.json` has the `@uix` registry, so shadcn works too. shadcn needs the `@/*` import alias
+in `tsconfig.json` (Next.js has it; add it in Vite); the uix-ui CLI doesn't.
 
 ```bash
 npx shadcn@latest add @uix/button
@@ -104,9 +105,20 @@ search the themes and read their tokens. Setup for each editor: https://uixdesig
 
 ## UIX Pro
 
-Everything in this repository is free and MIT. [UIX Pro](https://uixdesign.pagestro.com/pricing) is the paid
-Figma plugin plan. Pro items for this library (more themes, marketing blocks and visual styles) are on the way and
-will install with a licence key: `UIX_LICENSE=<key> npx uix-ui add @uix-pro/<name>`.
+Everything in this repository is free and MIT. [UIX Pro](https://uixdesign.pagestro.com/pricing) adds, with the
+same CLI: 10 marketing blocks (hero, pricing card, testimonial, CTA…), nine visual styles (glass, clay, neon,
+brutalism…) and 210 more themes. Set your key and add them by name:
+
+```bash
+export UIX_LICENSE=<your key>
+npx uix-ui@latest add hero pricing-card
+npx uix-ui@latest add skins                  # visual styles, then <html data-skin="glass">
+npx uix-ui@latest theme acid-prompt          # a Pro theme
+npx uix-ui@latest list                       # shows the Pro items too
+```
+
+Monthly or yearly, or a one-time lifetime license for one project or unlimited projects: email
+support@uixdesign.pagestro.com.
 
 ## This repository
 
