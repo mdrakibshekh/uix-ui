@@ -1,0 +1,10 @@
+node_modules/
+.DS_Store
+www/dist/
+www/public/themes/
+www/dist-ssr/
+
+# Internal working notes: kept on this Mac, not in the public repo
+CLAUDE.md
+.claude/
+www/PLAN-site.md

@@ -1,0 +1,17 @@
+{
+  "name": "@uix-ui/tailwind",
+  "version": "0.1.1",
+  "description": "UIX design tokens as Tailwind CSS v4 themes: colours (light + dark), type scale, spacing, radius, shadows. One theme per UIX preset.",
+  "license": "MIT",
+  "type": "module",
+  "style": "./uix.css",
+  "exports": {
+    ".": "./uix.css",
+    "./themes/*": "./themes/*"
+  },
+  "files": ["uix.css", "themes"],
+  "peerDependencies": { "tailwindcss": "^4.0.0" },
+  "homepage": "https://uixdesign.pagestro.com/ui",
+  "repository": { "type": "git", "url": "git+https://github.com/mdrakibshekh/uix-ui.git", "directory": "packages/tailwind" },
+  "keywords": ["tailwindcss", "design-tokens", "design-system", "theme", "shadcn"]
+}

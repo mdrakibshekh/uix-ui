@@ -1,0 +1,13 @@
+{
+  "name": "uix-ui-monorepo",
+  "private": true,
+  "type": "module",
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "build": "tsx scripts/build.mts",
+    "test": "node --test packages/cli/test.mjs"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.2"
+  }
+}

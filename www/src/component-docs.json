@@ -1,0 +1,3285 @@
+{
+ "icons": {
+  "name": "Icons",
+  "exports": [],
+  "uses": [],
+  "description": "Inline icons used by the components.",
+  "dependencies": [],
+  "registryDependencies": [],
+  "category": null,
+  "props": [],
+  "more": []
+ },
+ "button": {
+  "name": "Button",
+  "exports": [
+   "Button"
+  ],
+  "uses": [],
+  "description": "Primary actions. 7 variants × 3 sizes × 6 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "actions",
+  "props": [
+   {
+    "name": "variant",
+    "type": "primary | secondary | soft | outline | ghost | destructive | link",
+    "default": "\"primary\"",
+    "description": ""
+   },
+   {
+    "name": "size",
+    "type": "sm | md | lg",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "leadingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon before the label."
+   },
+   {
+    "name": "trailingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon after the label."
+   },
+   {
+    "name": "avatar",
+    "type": "React.ReactNode",
+    "description": "Avatar before the label (for example <Avatar size=\"xs\" initials=\"AB\" />)."
+   },
+   {
+    "name": "badge",
+    "type": "React.ReactNode",
+    "description": "Count pill after the label."
+   },
+   {
+    "name": "leadingDivider",
+    "type": "boolean",
+    "default": "false",
+    "description": "Hairline between the avatar / icon and the label."
+   },
+   {
+    "name": "trailingDivider",
+    "type": "boolean",
+    "default": "false",
+    "description": "Hairline between the label and the badge / icon."
+   },
+   {
+    "name": "loading",
+    "type": "boolean",
+    "default": "false",
+    "description": "Shows a spinner before the content, dims the label and blocks clicks."
+   },
+   {
+    "name": "showLabel",
+    "type": "boolean",
+    "default": "true",
+    "description": "False hides the label visually (it stays the accessible name): an icon-only button."
+   }
+  ],
+  "more": []
+ },
+ "icon-button": {
+  "name": "Icon button",
+  "exports": [
+   "IconButton"
+  ],
+  "uses": [],
+  "description": "Compact icon actions. 6 variants × 3 sizes × 5 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "actions",
+  "props": [
+   {
+    "name": "variant",
+    "type": "primary | secondary | soft | outline | ghost | destructive",
+    "default": "\"primary\"",
+    "description": ""
+   },
+   {
+    "name": "size",
+    "type": "sm | md | lg",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "\"aria-label\"",
+    "type": "string",
+    "description": "Icon-only buttons need an accessible name."
+   },
+   {
+    "name": "badgeDot",
+    "type": "boolean",
+    "default": "false",
+    "description": "Notification dot on the corner."
+   }
+  ],
+  "more": []
+ },
+ "button-group": {
+  "name": "Button group",
+  "exports": [
+   "ButtonGroup",
+   "ButtonGroupItem"
+  ],
+  "uses": [],
+  "description": "Attached segmented actions. 3 variants × 3 sizes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "actions",
+  "props": [
+   {
+    "name": "variant",
+    "type": "outline | primary | ghost",
+    "default": "\"outline\"",
+    "description": ""
+   },
+   {
+    "name": "size",
+    "type": "sm | md | lg",
+    "default": "\"md\"",
+    "description": ""
+   }
+  ],
+  "more": [
+   {
+    "name": "ButtonGroupItemProps",
+    "props": [
+     {
+      "name": "pressed",
+      "type": "boolean",
+      "description": "Marks the segment as the active one."
+     }
+    ]
+   }
+  ]
+ },
+ "link": {
+  "name": "Link",
+  "exports": [
+   "Link"
+  ],
+  "uses": [],
+  "description": "Inline navigation text. 3 colors × 4 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "actions",
+  "props": [
+   {
+    "name": "color",
+    "type": "brand | neutral | danger",
+    "default": "\"brand\"",
+    "description": ""
+   },
+   {
+    "name": "showIcon",
+    "type": "boolean",
+    "default": "false",
+    "description": "Shows the arrow-up-right icon after the text."
+   }
+  ],
+  "more": []
+ },
+ "input": {
+  "name": "Input",
+  "exports": [
+   "Input"
+  ],
+  "uses": [],
+  "description": "Text field with label & helper. 3 styles × 3 sizes × 7 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "outline | filled | underline",
+    "default": "\"outline\"",
+    "description": ""
+   },
+   {
+    "name": "size",
+    "type": "sm | md | lg",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "label",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "secondaryLabel",
+    "type": "React.ReactNode",
+    "description": "Right-aligned note next to the label, for example \"Optional\"."
+   },
+   {
+    "name": "feedback",
+    "type": "React.ReactNode",
+    "description": "Message under the field."
+   },
+   {
+    "name": "helper",
+    "type": "React.ReactNode",
+    "description": "Same as feedback."
+   },
+   {
+    "name": "error",
+    "type": "string",
+    "description": "Error message; also marks the field invalid and replaces the feedback."
+   },
+   {
+    "name": "leadingAvatar",
+    "type": "React.ReactNode",
+    "description": "Avatar at the start (for example <Avatar size=\"xs\" initials=\"AB\" />)."
+   },
+   {
+    "name": "leadingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon at the start."
+   },
+   {
+    "name": "leadingContent",
+    "type": "React.ReactNode",
+    "description": "Selector or text at the start, for example \"Email ▾\"."
+   },
+   {
+    "name": "leadingDivider",
+    "type": "boolean",
+    "description": "Hairline after the leading parts."
+   },
+   {
+    "name": "prefix",
+    "type": "React.ReactNode",
+    "description": "Fixed text before the value, for example \"https://\"."
+   },
+   {
+    "name": "tags",
+    "type": "React.ReactNode[]",
+    "description": "Tag chips before the value."
+   },
+   {
+    "name": "suffix",
+    "type": "React.ReactNode",
+    "description": "Fixed text after the value, for example \".com\"."
+   },
+   {
+    "name": "trailingDivider",
+    "type": "boolean",
+    "description": "Hairline before the trailing parts."
+   },
+   {
+    "name": "trailingContent",
+    "type": "React.ReactNode",
+    "description": "Action at the end, for example a \"Copy\" button."
+   },
+   {
+    "name": "helpIcon",
+    "type": "boolean | string",
+    "description": "Help icon; a string becomes its accessible name and tooltip."
+   },
+   {
+    "name": "trailingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon at the end."
+   }
+  ],
+  "more": []
+ },
+ "select": {
+  "name": "Select",
+  "exports": [
+   "Select"
+  ],
+  "uses": [],
+  "description": "Dropdown trigger. 3 styles × 3 sizes × 5 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "outline | filled | underline",
+    "default": "\"outline\"",
+    "description": ""
+   },
+   {
+    "name": "size",
+    "type": "sm | md | lg",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "label",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "secondaryLabel",
+    "type": "React.ReactNode",
+    "description": "Right-aligned note next to the label, for example \"Optional\"."
+   },
+   {
+    "name": "feedback",
+    "type": "React.ReactNode",
+    "description": "Message under the field."
+   },
+   {
+    "name": "helper",
+    "type": "React.ReactNode",
+    "description": "Same as feedback."
+   },
+   {
+    "name": "error",
+    "type": "string",
+    "description": "Error message; also marks the field invalid and replaces the feedback."
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "description": "First, disabled option shown until a value is picked."
+   },
+   {
+    "name": "leadingAvatar",
+    "type": "React.ReactNode",
+    "description": "Avatar at the start (for example <Avatar size=\"xs\" initials=\"AB\" />)."
+   },
+   {
+    "name": "leadingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon at the start."
+   },
+   {
+    "name": "leadingContent",
+    "type": "React.ReactNode",
+    "description": "Selector or text at the start, for example \"Email ▾\"."
+   },
+   {
+    "name": "leadingDivider",
+    "type": "boolean",
+    "description": "Hairline after the leading parts."
+   },
+   {
+    "name": "prefix",
+    "type": "React.ReactNode",
+    "description": "Fixed text before the value, for example \"https://\"."
+   },
+   {
+    "name": "tags",
+    "type": "React.ReactNode[]",
+    "description": "Tag chips before the value."
+   },
+   {
+    "name": "suffix",
+    "type": "React.ReactNode",
+    "description": "Fixed text after the value, for example \".com\"."
+   },
+   {
+    "name": "trailingDivider",
+    "type": "boolean",
+    "description": "Hairline before the trailing parts."
+   },
+   {
+    "name": "trailingContent",
+    "type": "React.ReactNode",
+    "description": "Action at the end, for example a \"Copy\" button."
+   },
+   {
+    "name": "helpIcon",
+    "type": "boolean | string",
+    "description": "Help icon; a string becomes its accessible name and tooltip."
+   },
+   {
+    "name": "trailingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon at the end."
+   }
+  ],
+  "more": []
+ },
+ "textarea": {
+  "name": "Textarea",
+  "exports": [
+   "Textarea"
+  ],
+  "uses": [],
+  "description": "Multi-line input. 3 styles × 4 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "outline | filled | underline",
+    "default": "\"outline\"",
+    "description": ""
+   },
+   {
+    "name": "label",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "secondaryLabel",
+    "type": "React.ReactNode",
+    "description": "Right-aligned note next to the label, for example \"Optional\"."
+   },
+   {
+    "name": "feedback",
+    "type": "React.ReactNode",
+    "description": "Message under the field."
+   },
+   {
+    "name": "helper",
+    "type": "React.ReactNode",
+    "description": "Same as feedback."
+   },
+   {
+    "name": "error",
+    "type": "string",
+    "description": "Error message; also marks the field invalid and replaces the feedback."
+   }
+  ],
+  "more": []
+ },
+ "search-field": {
+  "name": "Search field",
+  "exports": [
+   "SearchField"
+  ],
+  "uses": [],
+  "description": "Search bar with shortcut hint. 3 sizes × 3 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "size",
+    "type": "sm | md | lg",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "onClear",
+    "type": "() => void",
+    "description": "Called by the clear button, which shows while the field has a value."
+   },
+   {
+    "name": "shortcut",
+    "type": "React.ReactNode",
+    "description": "Shortcut hint (for example a Kbd) shown while the field is empty."
+   },
+   {
+    "name": "leadingAvatar",
+    "type": "React.ReactNode",
+    "description": "Avatar at the start (for example <Avatar size=\"xs\" initials=\"AB\" />)."
+   },
+   {
+    "name": "leadingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon at the start."
+   },
+   {
+    "name": "leadingContent",
+    "type": "React.ReactNode",
+    "description": "Selector or text at the start, for example \"Email ▾\"."
+   },
+   {
+    "name": "leadingDivider",
+    "type": "boolean",
+    "description": "Hairline after the leading parts."
+   },
+   {
+    "name": "prefix",
+    "type": "React.ReactNode",
+    "description": "Fixed text before the value, for example \"https://\"."
+   },
+   {
+    "name": "tags",
+    "type": "React.ReactNode[]",
+    "description": "Tag chips before the value."
+   },
+   {
+    "name": "suffix",
+    "type": "React.ReactNode",
+    "description": "Fixed text after the value, for example \".com\"."
+   },
+   {
+    "name": "trailingDivider",
+    "type": "boolean",
+    "description": "Hairline before the trailing parts."
+   },
+   {
+    "name": "trailingContent",
+    "type": "React.ReactNode",
+    "description": "Action at the end, for example a \"Copy\" button."
+   },
+   {
+    "name": "helpIcon",
+    "type": "boolean | string",
+    "description": "Help icon; a string becomes its accessible name and tooltip."
+   },
+   {
+    "name": "trailingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon at the end."
+   }
+  ],
+  "more": []
+ },
+ "number-input": {
+  "name": "Number input",
+  "exports": [
+   "NumberInput"
+  ],
+  "uses": [],
+  "description": "Numeric field with steppers. 3 sizes × 3 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "size",
+    "type": "sm | md | lg",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "label",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "secondaryLabel",
+    "type": "React.ReactNode",
+    "description": "Right-aligned note next to the label, for example \"Optional\"."
+   },
+   {
+    "name": "feedback",
+    "type": "React.ReactNode",
+    "description": "Message under the field."
+   },
+   {
+    "name": "helper",
+    "type": "React.ReactNode",
+    "description": "Same as feedback."
+   },
+   {
+    "name": "error",
+    "type": "string",
+    "description": "Error message; also marks the field invalid and replaces the feedback."
+   },
+   {
+    "name": "value",
+    "type": "number",
+    "description": "Current value (controlled)."
+   },
+   {
+    "name": "defaultValue",
+    "type": "number",
+    "description": ""
+   },
+   {
+    "name": "onValueChange",
+    "type": "(value: number) => void",
+    "description": "Called with the new number; the field clamps it to min / max when it loses focus."
+   },
+   {
+    "name": "leadingAvatar",
+    "type": "React.ReactNode",
+    "description": "Avatar at the start (for example <Avatar size=\"xs\" initials=\"AB\" />)."
+   },
+   {
+    "name": "leadingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon at the start."
+   },
+   {
+    "name": "leadingContent",
+    "type": "React.ReactNode",
+    "description": "Selector or text at the start, for example \"Email ▾\"."
+   },
+   {
+    "name": "leadingDivider",
+    "type": "boolean",
+    "description": "Hairline after the leading parts."
+   },
+   {
+    "name": "prefix",
+    "type": "React.ReactNode",
+    "description": "Fixed text before the value, for example \"https://\"."
+   },
+   {
+    "name": "tags",
+    "type": "React.ReactNode[]",
+    "description": "Tag chips before the value."
+   },
+   {
+    "name": "suffix",
+    "type": "React.ReactNode",
+    "description": "Fixed text after the value, for example \".com\"."
+   },
+   {
+    "name": "trailingDivider",
+    "type": "boolean",
+    "description": "Hairline before the trailing parts."
+   },
+   {
+    "name": "trailingContent",
+    "type": "React.ReactNode",
+    "description": "Action at the end, for example a \"Copy\" button."
+   },
+   {
+    "name": "helpIcon",
+    "type": "boolean | string",
+    "description": "Help icon; a string becomes its accessible name and tooltip."
+   },
+   {
+    "name": "trailingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon at the end."
+   }
+  ],
+  "more": []
+ },
+ "otp-input": {
+  "name": "OTP input",
+  "exports": [
+   "OtpInput"
+  ],
+  "uses": [],
+  "description": "One-time code / PIN boxes. 2 lengths × 4 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "length",
+    "type": "4 | 6",
+    "default": "\"6\"",
+    "description": ""
+   },
+   {
+    "name": "value",
+    "type": "string",
+    "description": "The code typed so far (controlled)."
+   },
+   {
+    "name": "defaultValue",
+    "type": "string",
+    "default": "\"\"",
+    "description": ""
+   },
+   {
+    "name": "onValueChange",
+    "type": "(value: string) => void",
+    "description": "Called on every change with the digits so far."
+   },
+   {
+    "name": "onComplete",
+    "type": "(value: string) => void",
+    "description": "Called once every box is filled."
+   },
+   {
+    "name": "error",
+    "type": "string",
+    "description": "Error message; also marks the boxes invalid."
+   },
+   {
+    "name": "helper",
+    "type": "React.ReactNode",
+    "description": "Text under the boxes."
+   },
+   {
+    "name": "name",
+    "type": "string",
+    "description": "Name of a hidden input that carries the code in a form."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "default": "false",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "combobox": {
+  "name": "Combobox",
+  "exports": [
+   "Combobox"
+  ],
+  "uses": [],
+  "description": "Searchable select with listbox. 2 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "label",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "secondaryLabel",
+    "type": "React.ReactNode",
+    "description": "Right-aligned note next to the label, for example \"Optional\"."
+   },
+   {
+    "name": "feedback",
+    "type": "React.ReactNode",
+    "description": "Message under the field."
+   },
+   {
+    "name": "helper",
+    "type": "React.ReactNode",
+    "description": "Same as feedback."
+   },
+   {
+    "name": "error",
+    "type": "string",
+    "description": "Error message; also marks the field invalid and replaces the feedback."
+   },
+   {
+    "name": "options",
+    "type": "ComboboxOption[]",
+    "description": "The choices."
+   },
+   {
+    "name": "value",
+    "type": "string",
+    "description": "Selected value (controlled)."
+   },
+   {
+    "name": "defaultValue",
+    "type": "string",
+    "description": ""
+   },
+   {
+    "name": "onValueChange",
+    "type": "(value: string) => void",
+    "description": ""
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "description": ""
+   },
+   {
+    "name": "emptyText",
+    "type": "string",
+    "default": "\"No results found.\"",
+    "description": "Shown when the search matches nothing."
+   }
+  ],
+  "more": []
+ },
+ "checkbox": {
+  "name": "Checkbox",
+  "exports": [
+   "Checkbox"
+  ],
+  "uses": [],
+  "description": "Multi-select control. 3 values × 4 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "label",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "indeterminate",
+    "type": "boolean",
+    "default": "false",
+    "description": "Shows the dash state (mixed selection)."
+   }
+  ],
+  "more": []
+ },
+ "radio": {
+  "name": "Radio",
+  "exports": [
+   "Radio"
+  ],
+  "uses": [],
+  "description": "Single-select control. 2 values × 4 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "label",
+    "type": "React.ReactNode",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "switch": {
+  "name": "Switch",
+  "exports": [
+   "Switch"
+  ],
+  "uses": [],
+  "description": "On/off toggle. 2 values × 4 states × 2 sizes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "size",
+    "type": "sm | md",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "label",
+    "type": "React.ReactNode",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "slider": {
+  "name": "Slider",
+  "exports": [
+   "Slider"
+  ],
+  "uses": [],
+  "description": "Value & range picker. 2 types × 4 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "value",
+    "type": "number",
+    "description": ""
+   },
+   {
+    "name": "defaultValue",
+    "type": "number",
+    "description": ""
+   },
+   {
+    "name": "onChange",
+    "type": "(event: React.ChangeEvent<HTMLInputElement>) => void",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "segmented": {
+  "name": "Segmented control",
+  "exports": [
+   "Segmented"
+  ],
+  "uses": [],
+  "description": "Exclusive option switcher. 3 lengths × 2 sizes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "size",
+    "type": "sm | md",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "options",
+    "type": "SegmentedOption[]",
+    "description": ""
+   },
+   {
+    "name": "value",
+    "type": "string",
+    "description": "Selected value (controlled)."
+   },
+   {
+    "name": "defaultValue",
+    "type": "string",
+    "description": ""
+   },
+   {
+    "name": "onValueChange",
+    "type": "(value: string) => void",
+    "description": ""
+   },
+   {
+    "name": "name",
+    "type": "string",
+    "description": "Shared name of the radio inputs (defaults to a generated id)."
+   }
+  ],
+  "more": []
+ },
+ "chip": {
+  "name": "Chip",
+  "exports": [
+   "Chip"
+  ],
+  "uses": [],
+  "description": "Filter / input tag. 3 styles × 4 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "filled | outline | soft",
+    "default": "\"filled\"",
+    "description": ""
+   },
+   {
+    "name": "selected",
+    "type": "boolean",
+    "default": "false",
+    "description": ""
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "default": "false",
+    "description": ""
+   },
+   {
+    "name": "onClick",
+    "type": "React.MouseEventHandler<HTMLButtonElement>",
+    "description": ""
+   },
+   {
+    "name": "leadingAvatar",
+    "type": "React.ReactNode",
+    "description": "Avatar before the label (for example <Avatar size=\"xs\" initials=\"AB\" />)."
+   },
+   {
+    "name": "leadingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon before the label."
+   },
+   {
+    "name": "onRemove",
+    "type": "() => void",
+    "description": "Shows a remove button and calls this when it is pressed."
+   }
+  ],
+  "more": []
+ },
+ "tag-input": {
+  "name": "Tag input",
+  "exports": [
+   "TagInput"
+  ],
+  "uses": [],
+  "description": "Field that collects tags. 3 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "label",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "secondaryLabel",
+    "type": "React.ReactNode",
+    "description": "Right-aligned note next to the label, for example \"Optional\"."
+   },
+   {
+    "name": "feedback",
+    "type": "React.ReactNode",
+    "description": "Message under the field."
+   },
+   {
+    "name": "helper",
+    "type": "React.ReactNode",
+    "description": "Same as feedback."
+   },
+   {
+    "name": "error",
+    "type": "string",
+    "description": "Error message; also marks the field invalid and replaces the feedback."
+   },
+   {
+    "name": "value",
+    "type": "string[]",
+    "description": "The tags (controlled)."
+   },
+   {
+    "name": "defaultValue",
+    "type": "string[]",
+    "description": ""
+   },
+   {
+    "name": "onValueChange",
+    "type": "(tags: string[]) => void",
+    "description": ""
+   },
+   {
+    "name": "maxTags",
+    "type": "number",
+    "description": "Stops accepting tags at this count."
+   }
+  ],
+  "more": []
+ },
+ "toggle": {
+  "name": "Toggle",
+  "exports": [
+   "Toggle",
+   "ToggleGroup"
+  ],
+  "uses": [],
+  "description": "Pressable on/off button + group. 2 variants × 2 values × 2 sizes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "variant",
+    "type": "default | outline",
+    "default": "\"default\"",
+    "description": ""
+   },
+   {
+    "name": "pressed",
+    "type": "false | true",
+    "description": ""
+   },
+   {
+    "name": "size",
+    "type": "sm | md",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "defaultPressed",
+    "type": "boolean",
+    "default": "false",
+    "description": "Start pressed (uncontrolled). Pass the variant prop \"pressed\" to control it."
+   },
+   {
+    "name": "onPressedChange",
+    "type": "(pressed: boolean) => void",
+    "description": ""
+   },
+   {
+    "name": "icon",
+    "type": "React.ReactNode",
+    "description": "Icon before the label."
+   }
+  ],
+  "more": [
+   {
+    "name": "ToggleGroupProps",
+    "props": [
+     {
+      "name": "attached",
+      "type": "boolean",
+      "default": "false",
+      "description": "Joins the toggles into one bar that shares a hairline (use the outline variant)."
+     }
+    ]
+   }
+  ]
+ },
+ "selection-card": {
+  "name": "Selection card",
+  "exports": [
+   "SelectionCard"
+  ],
+  "uses": [],
+  "description": "Radio / checkbox cards. 2 types × 4 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "type",
+    "type": "radio | checkbox",
+    "default": "\"radio\"",
+    "description": ""
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "description",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "price",
+    "type": "React.ReactNode",
+    "description": "Price or other fact under the description."
+   },
+   {
+    "name": "icon",
+    "type": "React.ReactNode",
+    "description": "Replaces the default icon in the round badge."
+   }
+  ],
+  "more": []
+ },
+ "date-picker": {
+  "name": "Date picker",
+  "exports": [
+   "DatePicker"
+  ],
+  "uses": [],
+  "description": "Month calendar. 2 types.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "type",
+    "type": "single | range",
+    "default": "\"single\"",
+    "description": ""
+   },
+   {
+    "name": "value",
+    "type": "DateRange",
+    "description": "Selected day, or the start and end of a range (controlled)."
+   },
+   {
+    "name": "defaultValue",
+    "type": "DateRange",
+    "description": ""
+   },
+   {
+    "name": "onValueChange",
+    "type": "(value: DateRange) => void",
+    "description": ""
+   },
+   {
+    "name": "month",
+    "type": "Date",
+    "description": "Month shown first."
+   },
+   {
+    "name": "weekStartsOn",
+    "type": "0 | 1",
+    "default": "1",
+    "description": "0 = Sunday, 1 = Monday."
+   },
+   {
+    "name": "locale",
+    "type": "string",
+    "description": "BCP 47 tag for month and weekday names."
+   },
+   {
+    "name": "showFooter",
+    "type": "boolean",
+    "default": "false",
+    "description": "Summary and Cancel / Apply buttons under the calendar."
+   },
+   {
+    "name": "onCancel",
+    "type": "() => void",
+    "description": ""
+   },
+   {
+    "name": "onApply",
+    "type": "(value: DateRange) => void",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "file-upload": {
+  "name": "File upload",
+  "exports": [
+   "FileUpload"
+  ],
+  "uses": [],
+  "description": "Drag & drop zone. 4 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "onFiles",
+    "type": "(files: File[]) => void",
+    "description": "Called with the chosen or dropped files."
+   },
+   {
+    "name": "helper",
+    "type": "React.ReactNode",
+    "description": "Text under the prompt, for example the accepted types."
+   },
+   {
+    "name": "error",
+    "type": "string",
+    "description": "Error message; replaces the helper text and turns the zone red."
+   }
+  ],
+  "more": []
+ },
+ "rating": {
+  "name": "Rating",
+  "exports": [
+   "Rating"
+  ],
+  "uses": [],
+  "description": "Star rating. 6 values × 2 sizes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "forms",
+  "props": [
+   {
+    "name": "size",
+    "type": "sm | md",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "value",
+    "type": "number",
+    "default": "0",
+    "description": "Stars filled, 0 to max."
+   },
+   {
+    "name": "max",
+    "type": "number",
+    "default": "5",
+    "description": "Number of stars."
+   },
+   {
+    "name": "onValueChange",
+    "type": "(value: number) => void",
+    "description": "Makes the stars buttons and calls this with the star that was pressed."
+   }
+  ],
+  "more": []
+ },
+ "tabs": {
+  "name": "Tabs",
+  "exports": [
+   "Tabs",
+   "TabsList",
+   "TabsTrigger",
+   "TabsContent"
+  ],
+  "uses": [],
+  "description": "Tab item + tab bar. 3 styles × 4 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "navigation",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "underline | pill | boxed",
+    "default": "\"underline\"",
+    "description": ""
+   },
+   {
+    "name": "value",
+    "type": "string",
+    "description": ""
+   },
+   {
+    "name": "onValueChange",
+    "type": "(value: string) => void",
+    "description": ""
+   }
+  ],
+  "more": [
+   {
+    "name": "TabsTriggerProps",
+    "props": [
+     {
+      "name": "value",
+      "type": "string",
+      "description": ""
+     },
+     {
+      "name": "leadingIcon",
+      "type": "React.ReactNode",
+      "description": "Icon before the label."
+     },
+     {
+      "name": "count",
+      "type": "React.ReactNode",
+      "description": "Number pill after the label."
+     }
+    ]
+   },
+   {
+    "name": "TabsContentProps",
+    "props": [
+     {
+      "name": "value",
+      "type": "string",
+      "description": ""
+     }
+    ]
+   }
+  ]
+ },
+ "breadcrumb": {
+  "name": "Breadcrumb",
+  "exports": [
+   "Breadcrumb"
+  ],
+  "uses": [],
+  "description": "Location trail. 2 separators × 2 lengths.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "navigation",
+  "props": [
+   {
+    "name": "items",
+    "type": "BreadcrumbItem[]",
+    "description": ""
+   },
+   {
+    "name": "separator",
+    "type": "\"chevron\" | \"slash\"",
+    "default": "\"chevron\"",
+    "description": ""
+   },
+   {
+    "name": "showHome",
+    "type": "boolean",
+    "default": "false",
+    "description": "Home icon before the first item."
+   }
+  ],
+  "more": []
+ },
+ "pagination": {
+  "name": "Pagination",
+  "exports": [
+   "Pagination"
+  ],
+  "uses": [],
+  "description": "Page navigation. 3 styles.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "navigation",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "outline | ghost | filled",
+    "default": "\"outline\"",
+    "description": ""
+   },
+   {
+    "name": "page",
+    "type": "number",
+    "description": "Current page, starting at 1."
+   },
+   {
+    "name": "pageCount",
+    "type": "number",
+    "description": ""
+   },
+   {
+    "name": "onPageChange",
+    "type": "(page: number) => void",
+    "description": ""
+   },
+   {
+    "name": "siblings",
+    "type": "number",
+    "default": "1",
+    "description": "Pages shown on each side of the current one."
+   }
+  ],
+  "more": []
+ },
+ "navbar": {
+  "name": "Navbar",
+  "exports": [
+   "Navbar"
+  ],
+  "uses": [],
+  "description": "Top app bar. 4 themes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "navigation",
+  "props": [
+   {
+    "name": "theme",
+    "type": "light | dark | brand | transparent",
+    "default": "\"light\"",
+    "description": ""
+   },
+   {
+    "name": "brand",
+    "type": "React.ReactNode",
+    "description": "Logo and name at the start."
+   },
+   {
+    "name": "links",
+    "type": "NavbarLink[]",
+    "description": "Links in the middle; the current one gets aria-current."
+   },
+   {
+    "name": "search",
+    "type": "React.ReactNode",
+    "description": "Search field between the links and the actions."
+   },
+   {
+    "name": "actions",
+    "type": "React.ReactNode",
+    "description": "Buttons, a notifications IconButton with badgeDot, an Avatar… at the end."
+   }
+  ],
+  "more": []
+ },
+ "sidebar-item": {
+  "name": "Sidebar",
+  "exports": [
+   "Sidebar",
+   "SidebarItem"
+  ],
+  "uses": [],
+  "description": "Vertical navigation + sidebar. 4 states × 2 types.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "navigation",
+  "props": [
+   {
+    "name": "active",
+    "type": "boolean",
+    "default": "false",
+    "description": "Marks the current page: sets aria-current and the active look."
+   },
+   {
+    "name": "disabled",
+    "type": "boolean",
+    "default": "false",
+    "description": ""
+   },
+   {
+    "name": "icon",
+    "type": "React.ReactNode",
+    "description": "Icon before the label."
+   },
+   {
+    "name": "badge",
+    "type": "React.ReactNode",
+    "description": "Count or tag after the label."
+   },
+   {
+    "name": "trailingChevron",
+    "type": "boolean",
+    "default": "false",
+    "description": "Chevron at the end."
+   }
+  ],
+  "more": []
+ },
+ "stepper": {
+  "name": "Stepper",
+  "exports": [
+   "Stepper",
+   "Step"
+  ],
+  "uses": [],
+  "description": "Progress steps. 4 statuses.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "navigation",
+  "props": [
+   {
+    "name": "status",
+    "type": "complete | current | upcoming | error",
+    "default": "\"complete\"",
+    "description": ""
+   },
+   {
+    "name": "index",
+    "type": "number",
+    "description": "Number shown in the circle while the step is current, upcoming or in error."
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "description",
+    "type": "React.ReactNode",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "menu": {
+  "name": "Menu",
+  "exports": [
+   "Menu",
+   "MenuItem",
+   "MenuSeparator"
+  ],
+  "uses": [],
+  "description": "Menu item + dropdown menu. 2 types × 3 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "navigation",
+  "props": [],
+  "more": [
+   {
+    "name": "MenuItemProps",
+    "props": [
+     {
+      "name": "type",
+      "type": "default | destructive",
+      "default": "\"default\"",
+      "description": ""
+     },
+     {
+      "name": "icon",
+      "type": "React.ReactNode",
+      "description": "Icon before the label."
+     },
+     {
+      "name": "leadingAvatar",
+      "type": "React.ReactNode",
+      "description": "Avatar before the label."
+     },
+     {
+      "name": "shortcut",
+      "type": "React.ReactNode",
+      "description": "Hint at the end, for example ⌘S."
+     },
+     {
+      "name": "checked",
+      "type": "boolean",
+      "description": "Turns the item into a checkbox item and sets its state."
+     }
+    ]
+   }
+  ]
+ },
+ "bottom-nav": {
+  "name": "Bottom navigation",
+  "exports": [
+   "BottomNav",
+   "BottomNavItem"
+  ],
+  "uses": [],
+  "description": "Mobile tab bar. 3 lengths × 2 themes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "navigation",
+  "props": [
+   {
+    "name": "theme",
+    "type": "light | dark",
+    "default": "\"light\"",
+    "description": ""
+   }
+  ],
+  "more": [
+   {
+    "name": "BottomNavItemProps",
+    "props": [
+     {
+      "name": "icon",
+      "type": "React.ReactNode",
+      "description": "Icon above the label."
+     },
+     {
+      "name": "active",
+      "type": "boolean",
+      "default": "false",
+      "description": "Marks the current tab."
+     }
+    ]
+   }
+  ]
+ },
+ "tree-view": {
+  "name": "Tree view",
+  "exports": [
+   "Tree",
+   "TreeItem"
+  ],
+  "uses": [],
+  "description": "Nested tree rows + tree. 3 levels × 3 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "navigation",
+  "props": [],
+  "more": [
+   {
+    "name": "TreeItemProps",
+    "props": [
+     {
+      "name": "level",
+      "type": "1 | 2 | 3",
+      "default": "\"1\"",
+      "description": ""
+     },
+     {
+      "name": "selected",
+      "type": "boolean",
+      "default": "false",
+      "description": ""
+     },
+     {
+      "name": "expanded",
+      "type": "boolean",
+      "description": "True / false for a folder (open / closed), left out for a file."
+     }
+    ]
+   }
+  ]
+ },
+ "footer": {
+  "name": "Footer",
+  "exports": [
+   "Footer"
+  ],
+  "uses": [],
+  "description": "Site footer. 2 types × 2 themes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "navigation",
+  "props": [
+   {
+    "name": "type",
+    "type": "simple | columns",
+    "default": "\"simple\"",
+    "description": ""
+   },
+   {
+    "name": "theme",
+    "type": "light | dark",
+    "default": "\"light\"",
+    "description": ""
+   },
+   {
+    "name": "brand",
+    "type": "React.ReactNode",
+    "description": "Logo and name."
+   },
+   {
+    "name": "tagline",
+    "type": "React.ReactNode",
+    "description": "Short line under the brand (columns type)."
+   },
+   {
+    "name": "links",
+    "type": "FooterLink[]",
+    "description": "Links next to the brand (simple type)."
+   },
+   {
+    "name": "columns",
+    "type": "FooterColumn[]",
+    "description": "Link groups (columns type)."
+   },
+   {
+    "name": "social",
+    "type": "React.ReactNode",
+    "description": "Social icons or links at the end of the bottom bar (columns type)."
+   },
+   {
+    "name": "copyright",
+    "type": "React.ReactNode",
+    "description": "Copyright line."
+   }
+  ],
+  "more": []
+ },
+ "alert": {
+  "name": "Alert",
+  "exports": [
+   "Alert"
+  ],
+  "uses": [],
+  "description": "Inline feedback. 4 types × 4 styles.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "feedback",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "subtle | accent | solid | outline",
+    "default": "\"subtle\"",
+    "description": ""
+   },
+   {
+    "name": "type",
+    "type": "info | success | warning | error",
+    "default": "\"info\"",
+    "description": ""
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "actions",
+    "type": "React.ReactNode",
+    "description": "Buttons or links under the message."
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "description": "Shows a dismiss button and calls this when it is pressed."
+   }
+  ],
+  "more": []
+ },
+ "banner": {
+  "name": "Banner",
+  "exports": [
+   "Banner"
+  ],
+  "uses": [],
+  "description": "Page-wide announcement. 5 types.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "feedback",
+  "props": [
+   {
+    "name": "type",
+    "type": "brand | info | success | warning | error",
+    "default": "\"brand\"",
+    "description": ""
+   },
+   {
+    "name": "action",
+    "type": "React.ReactNode",
+    "description": "Link or text shown after the message, underlined."
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "description": "Shows a close button and calls this when it is pressed."
+   }
+  ],
+  "more": []
+ },
+ "toast": {
+  "name": "Toast",
+  "exports": [
+   "Toast"
+  ],
+  "uses": [],
+  "description": "Transient notification. 4 types × 2 themes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "feedback",
+  "props": [
+   {
+    "name": "theme",
+    "type": "light | dark",
+    "default": "\"light\"",
+    "description": ""
+   },
+   {
+    "name": "type",
+    "type": "default | success | warning | error",
+    "default": "\"default\"",
+    "description": ""
+   },
+   {
+    "name": "action",
+    "type": "React.ReactNode",
+    "description": "Button or link on the right, for example an Undo action."
+   }
+  ],
+  "more": []
+ },
+ "tooltip": {
+  "name": "Tooltip",
+  "exports": [
+   "Tooltip"
+  ],
+  "uses": [],
+  "description": "Contextual hint. 4 placements × 2 themes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "feedback",
+  "props": [
+   {
+    "name": "theme",
+    "type": "dark | light",
+    "default": "\"dark\"",
+    "description": ""
+   },
+   {
+    "name": "placement",
+    "type": "top | bottom | left | right",
+    "default": "\"top\"",
+    "description": ""
+   },
+   {
+    "name": "content",
+    "type": "React.ReactNode",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "progress": {
+  "name": "Progress",
+  "exports": [
+   "Progress"
+  ],
+  "uses": [],
+  "description": "Linear progress bar. 5 values.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "feedback",
+  "props": [
+   {
+    "name": "value",
+    "type": "number",
+    "default": "0",
+    "description": "0 to 100."
+   }
+  ],
+  "more": []
+ },
+ "progress-circle": {
+  "name": "Progress circle",
+  "exports": [
+   "ProgressCircle"
+  ],
+  "uses": [],
+  "description": "Circular progress. 5 values × 2 sizes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "feedback",
+  "props": [
+   {
+    "name": "size",
+    "type": "sm | md",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "value",
+    "type": "number",
+    "default": "0",
+    "description": "0 to 100."
+   }
+  ],
+  "more": []
+ },
+ "spinner": {
+  "name": "Spinner",
+  "exports": [
+   "Spinner"
+  ],
+  "uses": [],
+  "description": "Loading indicator. 3 sizes × 3 colors.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "feedback",
+  "props": [
+   {
+    "name": "color",
+    "type": "brand | neutral | inverse",
+    "default": "\"brand\"",
+    "description": ""
+   },
+   {
+    "name": "size",
+    "type": "sm | md | lg",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "label",
+    "type": "string",
+    "default": "\"Loading\"",
+    "description": "Accessible name."
+   }
+  ],
+  "more": []
+ },
+ "skeleton": {
+  "name": "Skeleton",
+  "exports": [
+   "Skeleton"
+  ],
+  "uses": [],
+  "description": "Loading placeholder. 4 types.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "feedback",
+  "props": [
+   {
+    "name": "type",
+    "type": "\"block\" | \"text\" | \"avatar\" | \"card\" | \"list-item\"",
+    "default": "\"block\"",
+    "description": "\"block\" is a bare placeholder you size with className; the others are ready-made layouts."
+   }
+  ],
+  "more": []
+ },
+ "empty-state": {
+  "name": "Empty state",
+  "exports": [
+   "EmptyState"
+  ],
+  "uses": [],
+  "description": "No data / error screens. 4 types.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "feedback",
+  "props": [
+   {
+    "name": "type",
+    "type": "default | search | error | success",
+    "default": "\"default\"",
+    "description": ""
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "description",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "icon",
+    "type": "React.ReactNode",
+    "description": "Replaces the default icon of this type."
+   },
+   {
+    "name": "actions",
+    "type": "React.ReactNode",
+    "description": "Buttons under the text."
+   }
+  ],
+  "more": []
+ },
+ "notification": {
+  "name": "Notification",
+  "exports": [
+   "Notification"
+  ],
+  "uses": [],
+  "description": "Inbox / activity item. 2 statuses × 2 types.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "feedback",
+  "props": [
+   {
+    "name": "status",
+    "type": "unread | read",
+    "default": "\"unread\"",
+    "description": ""
+   },
+   {
+    "name": "avatar",
+    "type": "React.ReactNode",
+    "description": "Avatar at the start (for example <Avatar initials=\"RS\" />)."
+   },
+   {
+    "name": "name",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "action",
+    "type": "React.ReactNode",
+    "description": "What happened, for example \"commented on\"."
+   },
+   {
+    "name": "target",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "time",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "actions",
+    "type": "React.ReactNode",
+    "description": "Buttons under the message (Accept / Decline)."
+   }
+  ],
+  "more": []
+ },
+ "cookie-banner": {
+  "name": "Cookie banner",
+  "exports": [
+   "CookieBanner"
+  ],
+  "uses": [],
+  "description": "Consent prompt. 2 layouts.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "feedback",
+  "props": [
+   {
+    "name": "layout",
+    "type": "bar | card",
+    "default": "\"bar\"",
+    "description": ""
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "default": "\"We use cookies\"",
+    "description": ""
+   },
+   {
+    "name": "icon",
+    "type": "React.ReactNode",
+    "description": "Replaces the cookie icon."
+   },
+   {
+    "name": "acceptLabel",
+    "type": "React.ReactNode",
+    "default": "\"Accept all\"",
+    "description": ""
+   },
+   {
+    "name": "rejectLabel",
+    "type": "React.ReactNode",
+    "default": "\"Reject all\"",
+    "description": ""
+   },
+   {
+    "name": "settingsLabel",
+    "type": "React.ReactNode",
+    "default": "\"Cookie settings\"",
+    "description": ""
+   },
+   {
+    "name": "onAccept",
+    "type": "() => void",
+    "description": ""
+   },
+   {
+    "name": "onReject",
+    "type": "() => void",
+    "description": ""
+   },
+   {
+    "name": "onSettings",
+    "type": "() => void",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "badge": {
+  "name": "Badge",
+  "exports": [
+   "Badge"
+  ],
+  "uses": [],
+  "description": "Status labels. 5 colors × 3 styles × 2 sizes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "color",
+    "type": "neutral | brand | success | warning | error",
+    "default": "\"neutral\"",
+    "description": ""
+   },
+   {
+    "name": "appearance",
+    "type": "subtle | solid | outline",
+    "default": "\"subtle\"",
+    "description": ""
+   },
+   {
+    "name": "size",
+    "type": "sm | md",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "dot",
+    "type": "boolean",
+    "default": "false",
+    "description": "Shows a small dot before the label."
+   },
+   {
+    "name": "leadingIcon",
+    "type": "React.ReactNode",
+    "description": "Icon before the label."
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "description": "Shows a close button and calls this when it is pressed."
+   }
+  ],
+  "more": []
+ },
+ "avatar": {
+  "name": "Avatar",
+  "exports": [
+   "Avatar"
+  ],
+  "uses": [],
+  "description": "User image / initials. 5 sizes × 2 types × 2 shapes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "size",
+    "type": "xs | sm | md | lg | xl",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "shape",
+    "type": "circle | rounded",
+    "default": "\"circle\"",
+    "description": ""
+   },
+   {
+    "name": "type",
+    "type": "initials | icon",
+    "default": "\"initials\"",
+    "description": ""
+   },
+   {
+    "name": "src",
+    "type": "string",
+    "description": "Photo; initials or the icon show when it is missing."
+   },
+   {
+    "name": "alt",
+    "type": "string",
+    "default": "\"\"",
+    "description": ""
+   },
+   {
+    "name": "initials",
+    "type": "string",
+    "description": ""
+   },
+   {
+    "name": "status",
+    "type": "boolean",
+    "default": "false",
+    "description": "Online dot on the corner."
+   },
+   {
+    "name": "badge",
+    "type": "React.ReactNode",
+    "description": "Count pill on the corner."
+   }
+  ],
+  "more": []
+ },
+ "avatar-group": {
+  "name": "Avatar group",
+  "exports": [
+   "AvatarGroup"
+  ],
+  "uses": [],
+  "description": "Stacked avatars. 3 sizes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "size",
+    "type": "sm | md | lg",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "max",
+    "type": "number",
+    "description": "Show this many avatars, then a +N bubble."
+   },
+   {
+    "name": "count",
+    "type": "React.ReactNode",
+    "description": "Text of the bubble when you count the rest yourself, for example \"+5\"."
+   }
+  ],
+  "more": []
+ },
+ "card": {
+  "name": "Card",
+  "exports": [
+   "Card",
+   "CardMedia",
+   "CardHeader",
+   "CardTitle",
+   "CardDescription",
+   "CardActions",
+   "CardFooter"
+  ],
+  "uses": [],
+  "description": "Content container. 3 styles.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "outlined | elevated | filled",
+    "default": "\"outlined\"",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "stat": {
+  "name": "Stat",
+  "exports": [
+   "Stat"
+  ],
+  "uses": [],
+  "description": "KPI / metric card. 3 trends × 2 styles.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "outlined | elevated",
+    "default": "\"outlined\"",
+    "description": ""
+   },
+   {
+    "name": "trend",
+    "type": "up | down | neutral",
+    "default": "\"up\"",
+    "description": ""
+   },
+   {
+    "name": "label",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "value",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "delta",
+    "type": "React.ReactNode",
+    "description": "Change shown next to the value, for example +12.5%."
+   },
+   {
+    "name": "caption",
+    "type": "React.ReactNode",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "list-item": {
+  "name": "List item",
+  "exports": [
+   "ListItem"
+  ],
+  "uses": [],
+  "description": "Rows for lists & settings. 4 types.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "type",
+    "type": "one-line | two-line | avatar | toggle",
+    "default": "\"one-line\"",
+    "description": ""
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "subtitle",
+    "type": "React.ReactNode",
+    "description": "Second line; used by every type except \"one-line\"."
+   },
+   {
+    "name": "leading",
+    "type": "React.ReactNode",
+    "description": "Icon or image in the leading box."
+   },
+   {
+    "name": "initials",
+    "type": "string",
+    "description": "Initials for the \"avatar\" type."
+   },
+   {
+    "name": "trailing",
+    "type": "React.ReactNode",
+    "description": "Replaces the trailing chevron."
+   },
+   {
+    "name": "checked",
+    "type": "boolean",
+    "default": "false",
+    "description": "State of the switch in the \"toggle\" type."
+   },
+   {
+    "name": "onCheckedChange",
+    "type": "(checked: boolean) => void",
+    "description": ""
+   },
+   {
+    "name": "leadingCheckbox",
+    "type": "React.ReactNode",
+    "description": "Checkbox before the content (for example <Checkbox aria-label=\"Select\" />)."
+   },
+   {
+    "name": "trailingBadge",
+    "type": "React.ReactNode",
+    "description": "Badge before the chevron or switch (for example a count)."
+   }
+  ],
+  "more": []
+ },
+ "table": {
+  "name": "Table",
+  "exports": [
+   "Table",
+   "TableHeader",
+   "TableBody",
+   "TableRow",
+   "TableHead",
+   "TableCell"
+  ],
+  "uses": [],
+  "description": "Data table rows + table. 4 types.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "frameClassName",
+    "type": "string",
+    "description": "Classes for the scrolling frame around the table."
+   }
+  ],
+  "more": []
+ },
+ "accordion": {
+  "name": "Accordion",
+  "exports": [
+   "Accordion",
+   "AccordionItem"
+  ],
+  "uses": [],
+  "description": "Expandable section. 2 states × 3 styles.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "default | bordered | filled",
+    "default": "\"default\"",
+    "description": ""
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "divider": {
+  "name": "Divider",
+  "exports": [
+   "Divider"
+  ],
+  "uses": [],
+  "description": "Section separator. 4 types.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "type",
+    "type": "\"solid\" | \"dashed\" | \"with-label\" | \"with-icon\"",
+    "default": "\"solid\"",
+    "description": ""
+   },
+   {
+    "name": "label",
+    "type": "React.ReactNode",
+    "description": "Text in the middle of the \"with-label\" divider."
+   },
+   {
+    "name": "icon",
+    "type": "React.ReactNode",
+    "description": "Icon in the middle of the \"with-icon\" divider."
+   }
+  ],
+  "more": []
+ },
+ "kbd": {
+  "name": "Kbd",
+  "exports": [
+   "Kbd"
+  ],
+  "uses": [],
+  "description": "Keyboard shortcut. 2 styles × 2 sizes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "default | ghost",
+    "default": "\"default\"",
+    "description": ""
+   },
+   {
+    "name": "size",
+    "type": "sm | md",
+    "default": "\"md\"",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "timeline": {
+  "name": "Timeline",
+  "exports": [
+   "Timeline",
+   "TimelineItem"
+  ],
+  "uses": [],
+  "description": "Activity feed + timeline. 3 statuses.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "status",
+    "type": "done | current | upcoming",
+    "default": "\"done\"",
+    "description": ""
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "description",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "time",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "last",
+    "type": "boolean",
+    "default": "false",
+    "description": "Hides the line below the dot (set it on the final item)."
+   }
+  ],
+  "more": []
+ },
+ "description-list": {
+  "name": "Description list",
+  "exports": [
+   "DescriptionList"
+  ],
+  "uses": [],
+  "description": "Label / value details. 2 layouts.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "layout",
+    "type": "horizontal | stacked",
+    "default": "\"horizontal\"",
+    "description": ""
+   },
+   {
+    "name": "items",
+    "type": "DescriptionItem[]",
+    "description": "Rows of label + value. A Badge works as a value (a status)."
+   }
+  ],
+  "more": []
+ },
+ "code-block": {
+  "name": "Code block",
+  "exports": [
+   "CodeBlock"
+  ],
+  "uses": [],
+  "description": "Code snippet with copy. 2 themes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "theme",
+    "type": "dark | light",
+    "default": "\"dark\"",
+    "description": ""
+   },
+   {
+    "name": "code",
+    "type": "string",
+    "description": "Source text; each line gets a number and keywords / strings are colored."
+   },
+   {
+    "name": "filename",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "showHeader",
+    "type": "boolean",
+    "default": "true",
+    "description": "Bar with the file name and a copy button."
+   },
+   {
+    "name": "showLineNumbers",
+    "type": "boolean",
+    "default": "true",
+    "description": ""
+   }
+  ],
+  "more": []
+ },
+ "quote": {
+  "name": "Quote",
+  "exports": [
+   "Quote"
+  ],
+  "uses": [],
+  "description": "Blockquote & pull quote. 3 styles.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "appearance",
+    "type": "default | accent | large",
+    "default": "\"default\"",
+    "description": ""
+   },
+   {
+    "name": "author",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "role",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "avatar",
+    "type": "React.ReactNode",
+    "description": "Avatar beside the author (for example <Avatar initials=\"RS\" />)."
+   }
+  ],
+  "more": []
+ },
+ "chart": {
+  "name": "Chart",
+  "exports": [
+   "Chart"
+  ],
+  "uses": [],
+  "description": "Chart card (bar, line, donut). 3 types.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "data",
+  "props": [
+   {
+    "name": "type",
+    "type": "bar | line | donut",
+    "default": "\"bar\"",
+    "description": ""
+   },
+   {
+    "name": "data",
+    "type": "ChartDatum[]",
+    "description": ""
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "value",
+    "type": "React.ReactNode",
+    "description": "Headline figure, for example $48.2k."
+   },
+   {
+    "name": "delta",
+    "type": "React.ReactNode",
+    "description": "Change next to the value, for example 12.5%."
+   },
+   {
+    "name": "highlight",
+    "type": "number",
+    "description": "Bar chart: index of the highlighted bar (defaults to the tallest)."
+   }
+  ],
+  "more": []
+ },
+ "modal": {
+  "name": "Modal",
+  "exports": [
+   "Modal"
+  ],
+  "uses": [],
+  "description": "Dialog with actions. 3 sizes.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "overlays",
+  "props": [
+   {
+    "name": "size",
+    "type": "sm | md | lg",
+    "default": "\"md\"",
+    "description": ""
+   },
+   {
+    "name": "open",
+    "type": "boolean",
+    "description": ""
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "description": ""
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "headerIcon",
+    "type": "React.ReactNode",
+    "description": "Icon in a round badge above the title."
+   },
+   {
+    "name": "showClose",
+    "type": "boolean",
+    "default": "true",
+    "description": "Set to false to hide the close button in the corner."
+   },
+   {
+    "name": "footer",
+    "type": "React.ReactNode",
+    "description": "Buttons, right-aligned under the content."
+   }
+  ],
+  "more": []
+ },
+ "popover": {
+  "name": "Popover",
+  "exports": [
+   "Popover"
+  ],
+  "uses": [],
+  "description": "Anchored floating panel. 2 placements.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "overlays",
+  "props": [
+   {
+    "name": "placement",
+    "type": "bottom | top",
+    "default": "\"bottom\"",
+    "description": ""
+   },
+   {
+    "name": "trigger",
+    "type": "React.ReactElement",
+    "description": "The element that opens the panel (a Button): it gets the popovertarget attribute."
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "actions",
+    "type": "React.ReactNode",
+    "description": "Buttons at the end of the panel."
+   }
+  ],
+  "more": []
+ },
+ "drawer": {
+  "name": "Drawer",
+  "exports": [
+   "Drawer"
+  ],
+  "uses": [],
+  "description": "Side sheet. 2 sides.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "overlays",
+  "props": [
+   {
+    "name": "side",
+    "type": "right | left",
+    "default": "\"right\"",
+    "description": ""
+   },
+   {
+    "name": "open",
+    "type": "boolean",
+    "description": ""
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "description": ""
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "footer",
+    "type": "React.ReactNode",
+    "description": "Buttons pinned to the bottom."
+   }
+  ],
+  "more": []
+ },
+ "sheet": {
+  "name": "Bottom sheet",
+  "exports": [
+   "Sheet"
+  ],
+  "uses": [],
+  "description": "Mobile sheet. 2 types.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils"
+  ],
+  "category": "overlays",
+  "props": [
+   {
+    "name": "open",
+    "type": "boolean",
+    "description": ""
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "description": ""
+   },
+   {
+    "name": "title",
+    "type": "React.ReactNode",
+    "description": ""
+   },
+   {
+    "name": "actions",
+    "type": "SheetAction[]",
+    "description": "Rows of icon + label; pressing one calls its onSelect and closes the sheet."
+   },
+   {
+    "name": "footer",
+    "type": "React.ReactNode",
+    "description": "Buttons under the content (a full-width Button works well)."
+   }
+  ],
+  "more": []
+ },
+ "command-palette": {
+  "name": "Command palette",
+  "exports": [
+   "CommandPalette"
+  ],
+  "uses": [],
+  "description": "⌘K search & actions. 2 states.",
+  "dependencies": [
+   "class-variance-authority",
+   "clsx",
+   "tailwind-merge"
+  ],
+  "registryDependencies": [
+   "@uix/utils",
+   "@uix/icons"
+  ],
+  "category": "overlays",
+  "props": [
+   {
+    "name": "open",
+    "type": "boolean",
+    "description": ""
+   },
+   {
+    "name": "onClose",
+    "type": "() => void",
+    "description": ""
+   },
+   {
+    "name": "groups",
+    "type": "CommandGroup[]",
+    "description": ""
+   },
+   {
+    "name": "placeholder",
+    "type": "string",
+    "default": "\"Type a command or search…\"",
+    "description": ""
+   },
+   {
+    "name": "emptyText",
+    "type": "string",
+    "default": "\"No results found.\"",
+    "description": "Shown when nothing matches."
+   },
+   {
+    "name": "showFooter",
+    "type": "boolean",
+    "default": "true",
+    "description": "Hint bar under the list."
+   }
+  ],
+  "more": []
+ }
+}

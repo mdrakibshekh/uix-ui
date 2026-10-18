@@ -1,0 +1,43 @@
+/* Components index and component pages. Uses the home-page tokens (--ink, --muted, --line ...). */
+@layer components {
+  .cx-find{position:relative;max-width:420px;margin:0 0 8px}
+  .cx-find svg{position:absolute;left:12px;top:50%;translate:0 -50%;width:16px;height:16px;color:var(--muted);pointer-events:none}
+  .cx-find input{width:100%;height:40px;padding:0 12px 0 36px;border-radius:var(--r);background:var(--bg);color:var(--ink);box-shadow:inset 0 0 0 1px var(--line2);border:0;font-size:14px}
+  .cx-find input::placeholder{color:var(--muted)}
+  .cx-find input:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
+  .cx-count{font-size:13px;color:var(--muted);margin:6px 0 0}
+  .cx-cat{container-type:inline-size}
+  .cx-cat > h2{display:flex;align-items:baseline;gap:10px}
+  .cx-cat > h2 small{font-size:13px;font-weight:400;color:var(--muted);letter-spacing:0}
+  .cx-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;list-style:none;padding:0;margin:0}
+  @container (max-width:760px){.cx-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+  @container (max-width:560px){.cx-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @container (max-width:360px){.cx-grid{grid-template-columns:minmax(0,1fr)}}
+  .cx-tile{position:relative;display:grid;grid-template-rows:auto 1fr;border-radius:calc(var(--r)*1.5);background:var(--card);box-shadow:inset 0 0 0 1px var(--line);overflow:hidden;transition:box-shadow .2s,translate .2s}
+  .cx-tile:hover{box-shadow:inset 0 0 0 1px var(--line2),var(--shadow);translate:0 -2px}
+  .cx-tile:focus-within{box-shadow:inset 0 0 0 2px var(--brand)}
+  .cx-pv{position:relative;height:156px;overflow:hidden;background:radial-gradient(var(--line) 1px,transparent 1.2px) 0 0/16px 16px,var(--bg2);border-bottom:1px solid var(--line);color:var(--fg-primary,var(--ink))}
+  .cx-pv-in{position:absolute;left:50%;top:50%;transform-origin:center;pointer-events:none;user-select:none}
+  .cx-meta{padding:12px 14px 14px;display:grid;gap:2px;align-content:start}
+  .cx-meta a{font-size:14px;font-weight:500;color:var(--ink);text-decoration:none}
+  .cx-meta a::after{content:"";position:absolute;inset:0}
+  .cx-meta a:focus-visible{outline:none}
+  .cx-meta p{font-size:13px;line-height:1.5;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .cx-empty{padding:48px 0;color:var(--muted);font-size:15px}
+  .cx-missing{display:grid;gap:14px;justify-items:start;padding:56px 0}
+  .cx-missing h1{font-size:32px;letter-spacing:-.03em}
+  .cx-missing p{color:var(--ink2);max-width:520px;font-size:15px}
+  .cx-missing .btn{background:var(--brand);color:var(--on-brand)}
+  .cx-note{font-size:14.5px;color:var(--ink2);margin:6px 0 0}
+  .cx-note code{font:400 .88em var(--mono);background:var(--muted-bg);padding:2px 6px;border-radius:5px}
+  .dmain2 .cx-deps{list-style:none;padding:0;margin:8px 0;display:flex;flex-wrap:wrap;gap:8px}
+  .dmain2 .cx-deps li{margin:0}
+  .dmain2 .cx-deps code,.dmain2 .cx-deps a:not(.btn){display:inline-block;font:400 13px var(--mono);padding:4px 10px;border-radius:999px;background:var(--muted-bg);color:var(--ink2);text-decoration:none;box-shadow:inset 0 0 0 1px var(--line)}
+  .dmain2 .cx-deps a:hover{color:var(--ink);box-shadow:inset 0 0 0 1px var(--line2)}
+  .cx-sub{font-size:13.5px;color:var(--muted);margin:2px 0 8px}
+  .cx-hero .dprev-box{min-height:240px}
+  /* The docs page colours its own links; links inside a live demo keep the component's colours. */
+  .dmain2 .cx-pv a:not(.btn){color:inherit}
+  /* Prop names and defaults stay on one line; only the type column wraps. */
+  .dmain2 .dtable td:not(:nth-child(2)) code{white-space:nowrap}
+}

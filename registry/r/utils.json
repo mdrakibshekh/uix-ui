@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "utils",
+  "type": "registry:lib",
+  "title": "cn helper",
+  "description": "clsx + tailwind-merge, with this design system's type styles registered.",
+  "dependencies": [
+    "clsx",
+    "tailwind-merge"
+  ],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "lib/utils.ts",
+      "type": "registry:lib",
+      "content": "import { clsx, type ClassValue } from \"clsx\";\nimport { extendTailwindMerge } from \"tailwind-merge\";\n\n// tailwind-merge cannot tell that this design system's type styles (text-label-medium…) are font sizes: it would read\n// them as text colors and drop one of text-label-medium / text-fg-primary. Registering them keeps both.\nconst twMerge = extendTailwindMerge({\n  extend: {\n    classGroups: {\n      \"font-size\": [{ text: [\"display-large\",\"display-medium\",\"heading-1\",\"heading-2\",\"heading-3\",\"heading-4\",\"heading-5\",\"heading-6\",\"title-large\",\"title-medium\",\"title-small\",\"subtitle-large\",\"subtitle-medium\",\"subtitle-small\",\"body-xl\",\"body-large\",\"body-medium\",\"body-small\",\"body-xs\",\"label-large\",\"label-medium\",\"label-small\",\"caption\",\"caption-small\",\"overline\",\"code-large\",\"code\",\"code-small\"] }],\n    },\n  },\n});\n\nexport function cn(...inputs: ClassValue[]) {\n  return twMerge(clsx(inputs));\n}\n"
+    }
+  ]
+}

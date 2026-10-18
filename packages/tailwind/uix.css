@@ -1,0 +1,2 @@
+/* Default UIX theme. Other themes: @import "@uix-ui/tailwind/themes/<preset>.css"; */
+@import "./themes/uix.css";

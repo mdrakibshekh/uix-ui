@@ -1,0 +1,93 @@
+/* Page backdrops, one per visual style (quiet base + brand-tinted glows; an aurora behind glass). They are the surface the
+   skins are designed against: glass needs something colorful to refract. Set data-skin on <html> or on any wrapper. */
+
+:root {
+  --uix-backdrop-modern: radial-gradient(80% 80% at 50% -20%, rgba(28, 100, 242, 0.06), transparent), #FAFAFB;
+  --uix-backdrop-minimal: #FAFAFB;
+  --uix-backdrop-glass: radial-gradient(50% 50% at 20% 95%, rgba(16, 185, 129, 0.35), transparent), radial-gradient(50% 50% at 85% 10%, rgba(10, 81, 216, 0.55), transparent), radial-gradient(70% 70% at 95% 92%, rgba(228, 81, 0, 0.75), transparent), radial-gradient(75% 75% at 8% 8%, rgba(28, 100, 242, 0.9), transparent), #F0F6FF;
+  --uix-backdrop-neumorphism: #F3F4F6;
+  --uix-backdrop-brutalism: #F0F6FF;
+  --uix-backdrop-gradient: radial-gradient(70% 70% at 100% 100%, rgba(228, 81, 0, 0.1), transparent), radial-gradient(75% 75% at 0% 0%, rgba(28, 100, 242, 0.14), transparent), #FAFAFB;
+  --uix-backdrop-clay: radial-gradient(60% 60% at 30% 20%, rgba(255, 255, 255, 0.65), transparent), #F0F6FF;
+  --uix-backdrop-skeuomorphic: linear-gradient(180deg, rgba(255, 255, 255, 0.7), transparent 60%), #F3F4F6;
+  --uix-backdrop-neon: radial-gradient(55% 55% at 100% 105%, rgba(28, 100, 242, 0.16), transparent), radial-gradient(70% 70% at 50% -5%, rgba(28, 100, 242, 0.38), transparent), #070B1A;
+  --uix-backdrop-tonal: radial-gradient(110% 110% at 50% 0%, rgba(240, 246, 255, 1), transparent), #FAFAFB;
+}
+
+[data-theme="dark"] {
+  --uix-backdrop-modern: radial-gradient(60% 60% at 100% 110%, rgba(255, 92, 2, 0.06), transparent), radial-gradient(75% 75% at 50% -10%, rgba(63, 128, 255, 0.16), transparent), #090A0D;
+  --uix-backdrop-minimal: #090A0D;
+  --uix-backdrop-glass: radial-gradient(50% 50% at 25% 95%, rgba(16, 185, 129, 0.3), transparent), radial-gradient(50% 50% at 85% 10%, rgba(107, 158, 255, 0.5), transparent), radial-gradient(70% 70% at 95% 95%, rgba(255, 92, 2, 0.6), transparent), radial-gradient(75% 75% at 10% 5%, rgba(63, 128, 255, 0.85), transparent), #090A0D;
+  --uix-backdrop-neumorphism: #25292E;
+  --uix-backdrop-brutalism: radial-gradient(80% 80% at 50% 0%, rgba(63, 128, 255, 0.1), transparent), #090A0D;
+  --uix-backdrop-gradient: radial-gradient(70% 70% at 100% 100%, rgba(255, 92, 2, 0.18), transparent), radial-gradient(75% 75% at 0% 0%, rgba(63, 128, 255, 0.3), transparent), #090A0D;
+  --uix-backdrop-clay: radial-gradient(75% 75% at 50% 30%, rgba(63, 128, 255, 0.22), transparent), #090A0D;
+  --uix-backdrop-skeuomorphic: linear-gradient(0deg, rgba(0, 0, 0, 0.25), transparent 50%), linear-gradient(180deg, rgba(255, 255, 255, 0.05), transparent 55%), #25292E;
+  --uix-backdrop-neon: radial-gradient(55% 55% at 100% 105%, rgba(63, 128, 255, 0.16), transparent), radial-gradient(70% 70% at 50% -5%, rgba(63, 128, 255, 0.38), transparent), #090D1B;
+  --uix-backdrop-tonal: radial-gradient(90% 90% at 50% 0%, rgba(63, 128, 255, 0.12), transparent), #090A0D;
+}
+
+[data-skin="modern"] {
+  background: var(--uix-backdrop-modern);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+[data-skin="minimal"] {
+  background: var(--uix-backdrop-minimal);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+[data-skin="glass"] {
+  background: var(--uix-backdrop-glass);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+[data-skin="neumorphism"] {
+  background: var(--uix-backdrop-neumorphism);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+[data-skin="brutalism"] {
+  background: var(--uix-backdrop-brutalism);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+[data-skin="gradient"] {
+  background: var(--uix-backdrop-gradient);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+[data-skin="clay"] {
+  background: var(--uix-backdrop-clay);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+[data-skin="skeuomorphic"] {
+  background: var(--uix-backdrop-skeuomorphic);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+[data-skin="neon"] {
+  background: var(--uix-backdrop-neon);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+[data-skin="tonal"] {
+  background: var(--uix-backdrop-tonal);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* The page background lives on the data-skin element; let it show through the body. */
+[data-skin] body {
+  background: transparent;
+}

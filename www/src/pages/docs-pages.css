@@ -1,0 +1,65 @@
+/* Extras for the docs guide pages (pages/Docs.tsx, docs/*): tabs, cards, FAQ, live token swatches.
+   The shared blocks (code, preview, tables, callouts) live in site/docs.css. */
+@layer components {
+  .dp-tabbed{margin:14px 0}
+  .dp-tabs{display:flex;flex-wrap:wrap;gap:4px;padding:4px;width:fit-content;max-width:100%;border-radius:calc(var(--r)*1.25);background:var(--muted-bg)}
+  .dp-tabs button{padding:6px 14px;border-radius:var(--r);font-size:13.5px;color:var(--muted)}
+  .dp-tabs button:hover{color:var(--ink)}
+  .dp-tabs button[aria-selected=true]{background:var(--bg);color:var(--ink);font-weight:500;box-shadow:0 0 0 1px var(--line)}
+  .dp-panel{padding-top:6px;min-width:0}
+  .dp-note{margin-top:10px;font-size:15px;line-height:1.7;color:var(--ink2);max-width:720px}
+  .dp-note code,.dp-faq code{font:400 .88em var(--mono);background:var(--muted-bg);padding:1px 6px;border-radius:5px;color:var(--ink)}
+  .dp-note a{color:var(--bink)}
+
+  .dp-feat{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:14px 0}
+  .dp-feat > div{display:grid;gap:6px;align-content:start;padding:16px;border-radius:calc(var(--r)*1.25);box-shadow:inset 0 0 0 1px var(--line);background:var(--bg2)}
+  .dp-feat b{font-weight:500;color:var(--ink)}
+  .dp-feat span{font-size:14px;line-height:1.6;color:var(--muted)}
+
+  .dp-cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;margin:14px 0}
+  .dmain2 a.dp-card:not(.btn){display:grid;gap:4px;align-content:start;padding:16px;border-radius:calc(var(--r)*1.25);box-shadow:inset 0 0 0 1px var(--line);color:var(--ink);text-decoration:none}
+  .dmain2 a.dp-card:not(.btn):hover{background:var(--bg2);box-shadow:inset 0 0 0 1px var(--line2)}
+  .dp-card b{font-weight:500}
+  .dp-card span{font-size:14px;line-height:1.55;color:var(--muted)}
+
+  .dp-faq{margin:10px 0 18px;border-top:1px solid var(--line)}
+  .dp-faq details{border-bottom:1px solid var(--line);padding:14px 0}
+  .dp-faq summary{display:flex;justify-content:space-between;gap:16px;cursor:pointer;list-style:none;font-weight:500;color:var(--ink)}
+  .dp-faq summary::-webkit-details-marker{display:none}
+  .dp-faq summary::after{content:"+";color:var(--muted);font-weight:400}
+  .dp-faq details[open] summary::after{content:"\2013"}
+  .dp-faq p{margin-top:8px;max-width:720px;font-size:15px;line-height:1.7;color:var(--ink2)}
+
+  .dp-chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+  .dp-chips button{padding:6px 14px;border-radius:999px;font-size:13.5px;color:var(--ink2);box-shadow:inset 0 0 0 1px var(--line2)}
+  .dp-chips button:hover{background:var(--bg2);color:var(--ink)}
+  .dp-chips button[aria-pressed=true]{background:var(--soft);color:var(--bink);font-weight:500;box-shadow:inset 0 0 0 1px var(--brand)}
+
+  .dp-tokens{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:12px 0;padding:14px;border-radius:calc(var(--r)*1.25);background:var(--bg-canvas);box-shadow:inset 0 0 0 1px var(--line)}
+  .dp-tokens > div{display:grid;gap:6px;padding:8px;border-radius:var(--r);background:var(--bg-surface)}
+  .dp-tokens i{display:block;height:34px;border-radius:calc(var(--r)*.75);box-shadow:inset 0 0 0 1px rgba(128,128,128,.35)}
+  .dp-tokens code{font:400 12px var(--mono);color:var(--text-primary);background:none;padding:0;word-break:break-all}
+
+  .dp-toggle{display:flex;flex-wrap:wrap;align-items:center;gap:12px;justify-content:center}
+  .dp-toggle span{font-size:14px;color:var(--text-secondary)}
+  .dp-toggle code{font:400 .9em var(--mono)}
+
+  .dp-pair{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin:12px 0}
+  .dp-pair small{font-size:13px;color:var(--muted)}
+  .dp-pair .dcode{margin:6px 0 0}
+
+  .dp-nf p{margin-top:12px}
+  @media (max-width:860px){.dp-tabs{width:100%}.dp-tabs button{flex:1 1 auto}}
+}
+@layer components {
+  /* Links inside text must not rely on colour alone. */
+  .dmain2 section a:not(.btn):not(.dp-card),.dmain2 .dcall a,.dp-note a{text-decoration:underline;text-underline-offset:2px}
+}
+@layer components {
+  .dmain2 p code,.dmain2 li code,.dmain2 td code{overflow-wrap:anywhere}
+}
+@layer components {
+  /* home.css has a small "PRO" badge rule on .pro that also hits the Pro callout; undo it there. */
+  .dmain2 .dcall.pro{font:400 14.5px/1.6 var(--font);letter-spacing:normal;text-transform:none;padding:14px 16px;margin:16px 0;border-radius:calc(var(--r)*1.25);color:var(--ink2)}
+  .dmain2 .dcall.pro b{font-weight:500;color:var(--ink)}
+}

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>uix-ui: open-source React components and Tailwind themes in your brand</title>
+    <meta name="description" content="64 open-source React components and 42 Tailwind CSS v4 themes, made by the same engine as the UIX Figma plugin. Live, animated, accessible. MIT licensed." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 32 32%22%3E%3Crect width=%2232%22 height=%2232%22 rx=%229%22 fill=%22%2314111C%22/%3E%3Ctext x=%2216%22 y=%2221%22 font-family=%22monospace%22 font-size=%2213%22 fill=%22white%22 text-anchor=%22middle%22%3Eui%3C/text%3E%3C/svg%3E" />
+    <link rel="canonical" href="https://uixdesign.pagestro.com/ui" />
+    <meta property="og:title" content="uix-ui: components that ship in your brand" />
+    <meta property="og:description" content="Open-source React components and Tailwind v4 themes. Copy them in, own the code, let your AI agent build with them." />
+    <script>
+      // Set light/dark before the first paint: saved choice, else the system setting.
+      try { var m = localStorage.getItem("uixui.mode"); } catch (e) {}
+      document.documentElement.setAttribute("data-theme", m || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"));
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareSourceCode","name":"uix-ui","description":"Open-source React components and Tailwind CSS v4 themes","codeRepository":"https://github.com/mdrakibshekh/uix-ui","programmingLanguage":["TypeScript","CSS"],"license":"https://opensource.org/licenses/MIT","publisher":{"@type":"Organization","name":"Pagestro","url":"https://pagestro.com"}}</script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

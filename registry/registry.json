@@ -1,0 +1,2268 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "uix",
+  "homepage": "https://uixdesign.pagestro.com/ui",
+  "items": [
+    {
+      "name": "utils",
+      "type": "registry:lib",
+      "title": "cn helper",
+      "description": "clsx + tailwind-merge, with this design system's type styles registered.",
+      "dependencies": [
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "lib/utils.ts",
+          "type": "registry:lib"
+        }
+      ]
+    },
+    {
+      "name": "icons",
+      "type": "registry:ui",
+      "title": "Icons",
+      "description": "Inline icons used by the components.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "files": [
+        {
+          "path": "components/ui/icons.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button",
+      "type": "registry:ui",
+      "title": "Button",
+      "description": "Primary actions. 7 variants × 3 sizes × 6 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "icon-button",
+      "type": "registry:ui",
+      "title": "Icon Button",
+      "description": "Compact icon actions. 6 variants × 3 sizes × 5 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/icon-button.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "button-group",
+      "type": "registry:ui",
+      "title": "Button Group",
+      "description": "Attached segmented actions. 3 variants × 3 sizes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/button-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "link",
+      "type": "registry:ui",
+      "title": "Link",
+      "description": "Inline navigation text. 3 colors × 4 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/link.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "input",
+      "type": "registry:ui",
+      "title": "Input",
+      "description": "Text field with label & helper. 3 styles × 3 sizes × 7 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "select",
+      "type": "registry:ui",
+      "title": "Select",
+      "description": "Dropdown trigger. 3 styles × 3 sizes × 5 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/select.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "textarea",
+      "type": "registry:ui",
+      "title": "Textarea",
+      "description": "Multi-line input. 3 styles × 4 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/textarea.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "search-field",
+      "type": "registry:ui",
+      "title": "Search Field",
+      "description": "Search bar with shortcut hint. 3 sizes × 3 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/search-field.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "number-input",
+      "type": "registry:ui",
+      "title": "Number Input",
+      "description": "Numeric field with steppers. 3 sizes × 3 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/number-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "otp-input",
+      "type": "registry:ui",
+      "title": "OTP Input",
+      "description": "One-time code / PIN boxes. 2 lengths × 4 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/otp-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "combobox",
+      "type": "registry:ui",
+      "title": "Combobox",
+      "description": "Searchable select with listbox. 2 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/combobox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "checkbox",
+      "type": "registry:ui",
+      "title": "Checkbox",
+      "description": "Multi-select control. 3 values × 4 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/checkbox.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "radio",
+      "type": "registry:ui",
+      "title": "Radio",
+      "description": "Single-select control. 2 values × 4 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/radio.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "switch",
+      "type": "registry:ui",
+      "title": "Switch",
+      "description": "On/off toggle. 2 values × 4 states × 2 sizes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/switch.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "slider",
+      "type": "registry:ui",
+      "title": "Slider",
+      "description": "Value & range picker. 2 types × 4 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/slider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "segmented",
+      "type": "registry:ui",
+      "title": "Segmented Control",
+      "description": "Exclusive option switcher. 3 lengths × 2 sizes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/segmented.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chip",
+      "type": "registry:ui",
+      "title": "Chip",
+      "description": "Filter / input tag. 3 styles × 4 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/chip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tag-input",
+      "type": "registry:ui",
+      "title": "Tag Input",
+      "description": "Field that collects tags. 3 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tag-input.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toggle",
+      "type": "registry:ui",
+      "title": "Toggle",
+      "description": "Pressable on/off button + group. 2 variants × 2 values × 2 sizes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/toggle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "selection-card",
+      "type": "registry:ui",
+      "title": "Selection Card",
+      "description": "Radio / checkbox cards. 2 types × 4 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/selection-card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "date-picker",
+      "type": "registry:ui",
+      "title": "Date Picker",
+      "description": "Month calendar. 2 types.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/date-picker.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "file-upload",
+      "type": "registry:ui",
+      "title": "File Upload",
+      "description": "Drag & drop zone. 4 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/file-upload.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "rating",
+      "type": "registry:ui",
+      "title": "Rating",
+      "description": "Star rating. 6 values × 2 sizes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/rating.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tabs",
+      "type": "registry:ui",
+      "title": "Tabs",
+      "description": "Tab item + tab bar. 3 styles × 4 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tabs.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "breadcrumb",
+      "type": "registry:ui",
+      "title": "Breadcrumb",
+      "description": "Location trail. 2 separators × 2 lengths.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/breadcrumb.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "pagination",
+      "type": "registry:ui",
+      "title": "Pagination",
+      "description": "Page navigation. 3 styles.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/pagination.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "navbar",
+      "type": "registry:ui",
+      "title": "Navbar",
+      "description": "Top app bar. 4 themes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/navbar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sidebar-item",
+      "type": "registry:ui",
+      "title": "Sidebar Item",
+      "description": "Vertical navigation + sidebar. 4 states × 2 types.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sidebar-item.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stepper",
+      "type": "registry:ui",
+      "title": "Step",
+      "description": "Progress steps. 4 statuses.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/stepper.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "menu",
+      "type": "registry:ui",
+      "title": "Menu Item",
+      "description": "Menu item + dropdown menu. 2 types × 3 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/menu.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "bottom-nav",
+      "type": "registry:ui",
+      "title": "Bottom Navigation",
+      "description": "Mobile tab bar. 3 lengths × 2 themes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/bottom-nav.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tree-view",
+      "type": "registry:ui",
+      "title": "Tree Item",
+      "description": "Nested tree rows + tree. 3 levels × 3 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tree-view.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "footer",
+      "type": "registry:ui",
+      "title": "Footer",
+      "description": "Site footer. 2 types × 2 themes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/footer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "alert",
+      "type": "registry:ui",
+      "title": "Alert",
+      "description": "Inline feedback. 4 types × 4 styles.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/alert.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "banner",
+      "type": "registry:ui",
+      "title": "Banner",
+      "description": "Page-wide announcement. 5 types.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/banner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "type": "registry:ui",
+      "title": "Toast",
+      "description": "Transient notification. 4 types × 2 themes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/toast.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "tooltip",
+      "type": "registry:ui",
+      "title": "Tooltip",
+      "description": "Contextual hint. 4 placements × 2 themes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/tooltip.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "type": "registry:ui",
+      "title": "Progress",
+      "description": "Linear progress bar. 5 values.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/progress.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "progress-circle",
+      "type": "registry:ui",
+      "title": "Progress Circle",
+      "description": "Circular progress. 5 values × 2 sizes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/progress-circle.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "spinner",
+      "type": "registry:ui",
+      "title": "Spinner",
+      "description": "Loading indicator. 3 sizes × 3 colors.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/spinner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "skeleton",
+      "type": "registry:ui",
+      "title": "Skeleton",
+      "description": "Loading placeholder. 4 types.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/skeleton.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "empty-state",
+      "type": "registry:ui",
+      "title": "Empty State",
+      "description": "No data / error screens. 4 types.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/empty-state.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "notification",
+      "type": "registry:ui",
+      "title": "Notification",
+      "description": "Inbox / activity item. 2 statuses × 2 types.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/notification.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "cookie-banner",
+      "type": "registry:ui",
+      "title": "Cookie Banner",
+      "description": "Consent prompt. 2 layouts.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/cookie-banner.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "badge",
+      "type": "registry:ui",
+      "title": "Badge",
+      "description": "Status labels. 5 colors × 3 styles × 2 sizes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/badge.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar",
+      "type": "registry:ui",
+      "title": "Avatar",
+      "description": "User image / initials. 5 sizes × 2 types × 2 shapes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/avatar.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "avatar-group",
+      "type": "registry:ui",
+      "title": "Avatar Group",
+      "description": "Stacked avatars. 3 sizes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/avatar-group.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "card",
+      "type": "registry:ui",
+      "title": "Card",
+      "description": "Content container. 3 styles.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/card.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "stat",
+      "type": "registry:ui",
+      "title": "Stat",
+      "description": "KPI / metric card. 3 trends × 2 styles.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/stat.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "list-item",
+      "type": "registry:ui",
+      "title": "List Item",
+      "description": "Rows for lists & settings. 4 types.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/list-item.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "table",
+      "type": "registry:ui",
+      "title": "Table Row",
+      "description": "Data table rows + table. 4 types.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/table.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "accordion",
+      "type": "registry:ui",
+      "title": "Accordion",
+      "description": "Expandable section. 2 states × 3 styles.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/accordion.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "divider",
+      "type": "registry:ui",
+      "title": "Divider",
+      "description": "Section separator. 4 types.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/divider.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "kbd",
+      "type": "registry:ui",
+      "title": "Kbd",
+      "description": "Keyboard shortcut. 2 styles × 2 sizes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/kbd.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "timeline",
+      "type": "registry:ui",
+      "title": "Timeline Item",
+      "description": "Activity feed + timeline. 3 statuses.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/timeline.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "description-list",
+      "type": "registry:ui",
+      "title": "Description List",
+      "description": "Label / value details. 2 layouts.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/description-list.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "code-block",
+      "type": "registry:ui",
+      "title": "Code Block",
+      "description": "Code snippet with copy. 2 themes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/code-block.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "quote",
+      "type": "registry:ui",
+      "title": "Quote",
+      "description": "Blockquote & pull quote. 3 styles.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/quote.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "chart",
+      "type": "registry:ui",
+      "title": "Chart",
+      "description": "Chart card (bar, line, donut). 3 types.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/chart.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "modal",
+      "type": "registry:ui",
+      "title": "Modal",
+      "description": "Dialog with actions. 3 sizes.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/modal.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "popover",
+      "type": "registry:ui",
+      "title": "Popover",
+      "description": "Anchored floating panel. 2 placements.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/popover.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "drawer",
+      "type": "registry:ui",
+      "title": "Drawer",
+      "description": "Side sheet. 2 sides.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/drawer.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "sheet",
+      "type": "registry:ui",
+      "title": "Bottom Sheet",
+      "description": "Mobile sheet. 2 types.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils"
+      ],
+      "files": [
+        {
+          "path": "components/ui/sheet.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "command-palette",
+      "type": "registry:ui",
+      "title": "Command Palette",
+      "description": "⌘K search & actions. 2 states.",
+      "dependencies": [
+        "class-variance-authority",
+        "clsx",
+        "tailwind-merge"
+      ],
+      "registryDependencies": [
+        "@uix/utils",
+        "@uix/icons"
+      ],
+      "files": [
+        {
+          "path": "components/ui/command-palette.tsx",
+          "type": "registry:ui"
+        }
+      ]
+    },
+    {
+      "name": "theme",
+      "type": "registry:style",
+      "title": "UIX theme",
+      "description": "UIX theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Inter",
+          "Roboto Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-beetroot-harrow",
+      "type": "registry:style",
+      "title": "Beetroot Harrow theme",
+      "description": "Beetroot Harrow theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Familjen Grotesk",
+          "Rubik",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-boxwood-ballast",
+      "type": "registry:style",
+      "title": "Boxwood Ballast theme",
+      "description": "Boxwood Ballast theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Newsreader",
+          "Public Sans",
+          "IBM Plex Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-camellia-overtone",
+      "type": "registry:style",
+      "title": "Camellia Overtone theme",
+      "description": "Camellia Overtone theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Literata",
+          "Nunito Sans",
+          "Fira Code"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-cinnabar-vitae",
+      "type": "registry:style",
+      "title": "Cinnabar Vitae theme",
+      "description": "Cinnabar Vitae theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Young Serif",
+          "Work Sans",
+          "IBM Plex Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-crimson-aegis",
+      "type": "registry:style",
+      "title": "Crimson Aegis theme",
+      "description": "Crimson Aegis theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Archivo",
+          "Space Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-custard-schoolbook",
+      "type": "registry:style",
+      "title": "Custard Schoolbook theme",
+      "description": "Custard Schoolbook theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Epilogue",
+          "Karla",
+          "IBM Plex Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-damson-basket",
+      "type": "registry:style",
+      "title": "Damson Basket theme",
+      "description": "Damson Basket theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Geist",
+          "Geist Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-doubloon-directory",
+      "type": "registry:style",
+      "title": "Doubloon Directory theme",
+      "description": "Doubloon Directory theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Instrument Serif",
+          "Inter",
+          "Geist Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-ember-ledger",
+      "type": "registry:style",
+      "title": "Ember Ledger theme",
+      "description": "Ember Ledger theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Fraunces",
+          "Instrument Sans",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-evensong-statehouse",
+      "type": "registry:style",
+      "title": "Evensong Statehouse theme",
+      "description": "Evensong Statehouse theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Gloock",
+          "Albert Sans",
+          "DM Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-glaze-wheelhouse",
+      "type": "registry:style",
+      "title": "Glaze Wheelhouse theme",
+      "description": "Glaze Wheelhouse theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Gloock",
+          "Albert Sans",
+          "DM Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-glowstick-pipeline",
+      "type": "registry:style",
+      "title": "Glowstick Pipeline theme",
+      "description": "Glowstick Pipeline theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Unbounded",
+          "Onest",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-gossamer-frond",
+      "type": "registry:style",
+      "title": "Gossamer Frond theme",
+      "description": "Gossamer Frond theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Literata",
+          "Nunito Sans",
+          "Fira Code"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-greenhouse-catalogue",
+      "type": "registry:style",
+      "title": "Greenhouse Catalogue theme",
+      "description": "Greenhouse Catalogue theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Sora",
+          "Plus Jakarta Sans",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-heliotrope-anthology",
+      "type": "registry:style",
+      "title": "Heliotrope Anthology theme",
+      "description": "Heliotrope Anthology theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Space Grotesk",
+          "Inter",
+          "Space Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-highscore-jolt",
+      "type": "registry:style",
+      "title": "Highscore Jolt theme",
+      "description": "Highscore Jolt theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Atkinson Hyperlegible",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-hushed-sentinel",
+      "type": "registry:style",
+      "title": "Hushed Sentinel theme",
+      "description": "Hushed Sentinel theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Archivo",
+          "Space Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-impulse-kiosk",
+      "type": "registry:style",
+      "title": "Impulse Kiosk theme",
+      "description": "Impulse Kiosk theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Epilogue",
+          "Karla",
+          "IBM Plex Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-lagoon-stretch",
+      "type": "registry:style",
+      "title": "Lagoon Stretch theme",
+      "description": "Lagoon Stretch theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Sora",
+          "Plus Jakarta Sans",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-letterpress-bluebird",
+      "type": "registry:style",
+      "title": "Letterpress Bluebird theme",
+      "description": "Letterpress Bluebird theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Archivo",
+          "Space Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-lilac-trellis",
+      "type": "registry:style",
+      "title": "Lilac Trellis theme",
+      "description": "Lilac Trellis theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Outfit",
+          "Geist Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-monolith-standup",
+      "type": "registry:style",
+      "title": "Monolith Standup theme",
+      "description": "Monolith Standup theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Syne",
+          "Manrope",
+          "Fira Code"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-petal-whisper",
+      "type": "registry:style",
+      "title": "Petal Whisper theme",
+      "description": "Petal Whisper theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Geist",
+          "Geist Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-pistachio-keystone",
+      "type": "registry:style",
+      "title": "Pistachio Keystone theme",
+      "description": "Pistachio Keystone theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "IBM Plex Serif",
+          "IBM Plex Sans",
+          "IBM Plex Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-polish-pitstop",
+      "type": "registry:style",
+      "title": "Polish Pitstop theme",
+      "description": "Polish Pitstop theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Epilogue",
+          "Karla",
+          "IBM Plex Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-redeye-passport",
+      "type": "registry:style",
+      "title": "Redeye Passport theme",
+      "description": "Redeye Passport theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Familjen Grotesk",
+          "Rubik",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-russet-tasting",
+      "type": "registry:style",
+      "title": "Russet Tasting theme",
+      "description": "Russet Tasting theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Bricolage Grotesque",
+          "Figtree",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-sapling-broadside",
+      "type": "registry:style",
+      "title": "Sapling Broadside theme",
+      "description": "Sapling Broadside theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Unbounded",
+          "Onest",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-seasalt-digest",
+      "type": "registry:style",
+      "title": "Seasalt Digest theme",
+      "description": "Seasalt Digest theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Playfair Display",
+          "Source Sans 3",
+          "IBM Plex Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-sequin-streamer",
+      "type": "registry:style",
+      "title": "Sequin Streamer theme",
+      "description": "Sequin Streamer theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Outfit",
+          "Geist Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-sherbet-courier",
+      "type": "registry:style",
+      "title": "Sherbet Courier theme",
+      "description": "Sherbet Courier theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Literata",
+          "Nunito Sans",
+          "Fira Code"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-sideline-broadsheet",
+      "type": "registry:style",
+      "title": "Sideline Broadsheet theme",
+      "description": "Sideline Broadsheet theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "IBM Plex Serif",
+          "IBM Plex Sans",
+          "IBM Plex Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-sonata-whisker",
+      "type": "registry:style",
+      "title": "Sonata Whisker theme",
+      "description": "Sonata Whisker theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "IBM Plex Serif",
+          "IBM Plex Sans",
+          "IBM Plex Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-spring-doorstep",
+      "type": "registry:style",
+      "title": "Spring Doorstep theme",
+      "description": "Spring Doorstep theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Fraunces",
+          "Instrument Sans",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-stagehand-floodlight",
+      "type": "registry:style",
+      "title": "Stagehand Floodlight theme",
+      "description": "Stagehand Floodlight theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Fraunces",
+          "Instrument Sans",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-sweatband-grape",
+      "type": "registry:style",
+      "title": "Sweatband Grape theme",
+      "description": "Sweatband Grape theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Playfair Display",
+          "Source Sans 3",
+          "IBM Plex Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-terracotta-drafting",
+      "type": "registry:style",
+      "title": "Terracotta Drafting theme",
+      "description": "Terracotta Drafting theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Schibsted Grotesk",
+          "Hanken Grotesk",
+          "Geist Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-ticker-cerulean",
+      "type": "registry:style",
+      "title": "Ticker Cerulean theme",
+      "description": "Ticker Cerulean theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Bricolage Grotesque",
+          "Figtree",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-turnpike-haul",
+      "type": "registry:style",
+      "title": "Turnpike Haul theme",
+      "description": "Turnpike Haul theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "DM Serif Display",
+          "DM Sans",
+          "DM Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-understory-array",
+      "type": "registry:style",
+      "title": "Understory Array theme",
+      "description": "Understory Array theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Atkinson Hyperlegible",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    },
+    {
+      "name": "theme-vermilion-concierge",
+      "type": "registry:style",
+      "title": "Vermilion Concierge theme",
+      "description": "Vermilion Concierge theme: colours (light + dark), type scale, spacing, radius and shadows as a Tailwind v4 theme.",
+      "dependencies": [],
+      "registryDependencies": [],
+      "meta": {
+        "fonts": [
+          "Sora",
+          "Plus Jakarta Sans",
+          "JetBrains Mono"
+        ]
+      },
+      "files": [
+        {
+          "path": "styles/uix.css",
+          "type": "registry:file",
+          "target": "~/src/styles/uix.css"
+        }
+      ]
+    }
+  ]
+}
