@@ -32,8 +32,7 @@ h1,h2,h3,h4{font-weight:500;margin:0;letter-spacing:-.02em}p{margin:0}button,inp
 header.site-top{border-bottom:1px solid var(--line);position:sticky;top:0;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);z-index:10}
 .nav{display:flex;align-items:center;gap:24px;height:56px}
 .logo{display:flex;align-items:center;gap:8px;font-weight:500;font-size:15px;text-decoration:none}
-.mark{width:24px;height:24px;border-radius:7px;background:linear-gradient(135deg,#16035E,#6301E4);display:grid;place-items:center;color:#fff;font:500 10px var(--mono);position:relative}
-.mark::after{content:"";position:absolute;top:3px;width:4px;height:4px;border-radius:50%;background:#FBAE17}
+.mark{width:24px;height:24px;display:block;flex:none}  /* the UIX logo icon (public/uix-logo.svg) */
 .links{display:flex;gap:20px;color:var(--muted)}.links a{text-decoration:none}.links a:hover,.links a.on{color:var(--ink)}
 .right{margin-left:auto;display:flex;gap:6px;align-items:center}
 .search{display:flex;align-items:center;gap:8px;width:260px;height:34px;padding:0 6px 0 10px;border-radius:var(--r);background:var(--muted-bg);color:var(--muted);font-size:13px}

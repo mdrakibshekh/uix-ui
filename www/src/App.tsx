@@ -24,7 +24,7 @@ function Nav({ onSearch }: { onSearch: () => void }) {
   return (
     <header className="site-top">
       <div className="wrap nav">
-        <Link className="logo" to="/" aria-label="uix-ui home"><span className="mark">ui</span>uix-ui</Link>
+        <Link className="logo" to="/" aria-label="uix-ui home"><img className="mark" src={`${import.meta.env.BASE_URL}uix-logo.svg`} alt="" width={24} height={24} />uix-ui</Link>
         <nav className="links" aria-label="Main">
           {LINKS.map(([l, h]) => <Link key={h} to={h} className={on(h) ? "on" : undefined} aria-current={on(h) ? "page" : undefined}>{l}</Link>)}
           <a href="https://uixdesign.pagestro.com/">UIX for Figma</a>
@@ -44,7 +44,7 @@ function Footer() {
   return (
     <footer><div className="wrap">
       <div className="fgrid">
-        <div><Link className="logo" to="/"><span className="mark">ui</span>uix-ui</Link><p>Open-source React components and Tailwind CSS v4 themes, by Pagestro. Its sister product, UIX for Figma, builds the same design system in Figma.</p></div>
+        <div><Link className="logo" to="/"><img className="mark" src={`${import.meta.env.BASE_URL}uix-logo.svg`} alt="" width={24} height={24} />uix-ui</Link><p>Open-source React components and Tailwind CSS v4 themes, by Pagestro. Its sister product, UIX for Figma, builds the same design system in Figma.</p></div>
         <div><h5>Docs</h5><ul><li><Link to="/docs">Introduction</Link></li><li><Link to="/docs/installation">Installation</Link></li><li><Link to="/docs/theming">Theming</Link></li><li><Link to="/docs/dark-mode">Dark mode</Link></li><li><Link to="/docs/cli">CLI</Link></li></ul></div>
         <div><h5>Library</h5><ul><li><Link to="/components">Components</Link></li><li><Link to="/examples">Examples</Link></li><li><Link to="/themes">Themes</Link></li><li><Link to="/templates">Templates</Link></li><li><Link to="/docs/mcp">AI agents and MCP</Link></li></ul></div>
         <div><h5>Community</h5><ul><li><a href={GITHUB}>GitHub</a></li><li><a href="https://uixdesign.pagestro.com/llms.txt">llms.txt</a></li></ul></div>
