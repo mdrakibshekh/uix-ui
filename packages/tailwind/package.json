@@ -1,6 +1,6 @@
 {
   "name": "@uix-ui/tailwind",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "UIX design tokens as Tailwind CSS v4 themes: colours (light + dark), type scale, spacing, radius, shadows. One theme per UIX preset.",
   "license": "MIT",
   "type": "module",
